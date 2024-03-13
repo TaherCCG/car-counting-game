@@ -1,0 +1,15 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "description": "## User Stories",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "taher",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
