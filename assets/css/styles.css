@@ -1,0 +1,59 @@
+
+
+/* Car Animation */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card:hover .wheel {
+    animation: spin 1s linear infinite;
+}
+.card:hover .car{
+    animation: bounce 1s infinite;
+}
+.car {
+    width: 100%;
+    height: 80%;
+   
+}
+
+.wheel {  
+    width: 90px;
+    height: 90px;
+}
+
+.wheel1 {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+
+}
+
+.wheel2 {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
