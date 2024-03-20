@@ -26,8 +26,6 @@ $('#card2').mouseleave(function () {
     $(this).find('.mode2').fadeOut(2000);
 });
 
-// $('button').click(playSound("sound2"));
-
 document.getElementById("playMode1").addEventListener("click", function() {
     playSound("sound2");
     setTimeout(() => {
