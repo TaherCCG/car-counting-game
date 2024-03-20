@@ -1,21 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722); /* Gradient from top to bottom */
+    color: aliceblue;
+}
 
+.btn{
+    background-color: #8d06db;
+    width: 100%;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.card-body {
+    display: none; /* Hide the #par element by default */
+}
 
 /* Car Animation */
 .card-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    justify-content: space-around; 
     margin-top: 50px;
+    cursor: pointer;
 }
-
 .card {
     position: relative;
-    width: 400px;
-    height: 250px;
-    overflow: hidden;
-    border: 1px solid #ccc;
+    margin: 0 10px;
+    border: 1px solid #030000;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s;  
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-animation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
 }
 
 .card:hover .wheel {
@@ -25,9 +57,8 @@
     animation: bounce 1s infinite;
 }
 .car {
-    width: 100%;
-    height: 80%;
-   
+    width: 90%;
+    height: 100%; 
 }
 
 .wheel {  
@@ -37,17 +68,18 @@
 
 .wheel1 {
     position: absolute;
-    top: 45%;
-    left: 13%;
+    top: 55%;
+    left: 10%;
 
 }
 
 .wheel2 {
     position: absolute;
-    top: 45%;
-    left: 60%;
+    top: 55%;
+    left: 52%;
 }
 
+/* Key Frames for animation */
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -56,4 +88,55 @@
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-2px); }
+}
+
+
+@media (min-width: 768px) {
+
+    /* Car animation */
+    .wheel {  
+        width: 70px;
+        height: 70px;
+    }
+    
+    .wheel1 {
+        position: absolute;
+        top: 55%;
+        left: 13%;    
+    }
+    
+    .wheel2 {
+        position: absolute;
+        top: 55%;
+        left: 60%;
+    }
+
+    .car {
+        width: 100%;
+        height: 95%; 
+    }
+    /* End */
+}
+
+@media (min-width: 1199px) {
+    
+    /* Car Animation */
+    .wheel {  
+        width: 100px;
+        height: 100px;
+    }
+    
+    .wheel1 {
+        position: absolute;
+        top: 50%;
+        left: 17%;    
+    }
+    
+    .wheel2 {
+        position: absolute;
+        top: 50%;
+        left: 64%;
+    }
+    /* End */
+     
 }
