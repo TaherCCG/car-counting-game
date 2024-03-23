@@ -1,0 +1,218 @@
+body {
+    font-family: "Kode Mono", monospace, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722); /* Gradient from top to bottom */
+    color: aliceblue;
+}
+
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+*/
+
+/* note: 21/3  add more font classes  */
+.kode-mono-title {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+} 
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8d06db;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-link {
+    margin: 0 10px;
+    color:antiquewhite;
+    size: 24px;
+}
+
+.card-body {
+    display: none; /* Hide the .card-body element by default */
+}
+
+/* Car Animation */
+.card-container {
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 50px;
+    cursor: pointer;
+}
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border: 1px solid #030000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s;    
+}
+
+.btn{
+    background-color: #8d06db;
+    width: 90%;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-animation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
+}
+
+.card:hover .wheel {
+    animation: spin 1s linear infinite;
+}
+.card:hover .car{
+    animation: bounce 1s infinite;
+}
+.car {
+    width: 90%;
+    height: 100%; 
+}
+
+.wheel {  
+    width: 90px;
+    height: 90px;
+}
+
+.wheel1 {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+
+}
+
+.wheel2 {
+    position: absolute;
+    top: 55%;
+    left: 52%;
+}
+
+/* Key Frames for animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;   
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    backdrop-filter: blur(20px);   
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+}
+
+.modal-footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px 20px;
+}
+
+.modal-footer-content a {
+    background-color: #8d06db;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+}
+
+@media (min-width: 768px) {
+
+    /* Car animation */
+    .wheel {  
+        width: 70px;
+        height: 70px;
+    }
+    
+    .wheel1 {
+        position: absolute;
+        top: 55%;
+        left: 13%;    
+    }
+    
+    .wheel2 {
+        position: absolute;
+        top: 55%;
+        left: 60%;
+    }
+
+    .car {
+        width: 100%;
+        height: 95%; 
+    }
+    /* End */
+}
+
+@media (min-width: 1199px) {
+    
+    /* Car Animation */
+    .wheel {  
+        width: 100px;
+        height: 100px;
+    }
+    
+    .wheel1 {
+        position: absolute;
+        top: 50%;
+        left: 17%;    
+    }
+    
+    .wheel2 {
+        position: absolute;
+        top: 50%;
+        left: 64%;
+    }
+    /* End */     
+}
