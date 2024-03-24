@@ -18,7 +18,7 @@ body {
 }
 
 .weather-background {   
-   
+   background-image: url('../images/background/modal-bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
