@@ -5,7 +5,10 @@
 // Import the functions to be tested
 const { playSound, setupEventListeners } = require('../menu.js');
 
-// Mock Sound Tests
+/* Mock the Audio constructor and play method to test the playSound function
+ Got the solution from https://jestjs.io/docs/es6-class-mocks and https://stackoverflow.com/questions/69591847/how-do-i-mock-audio-api-in-jest-properly
+ Also used this method in the previous walk through project simon game to mock the audio.
+*/
 describe('playSound function', () => {
     test('it should play the specified sound "car ignition"', () => {
         // Mock the Audio constructor and play method
