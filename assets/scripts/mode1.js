@@ -1,5 +1,16 @@
 const track = document.getElementById('track');
-const cars = {};
+const cars = {
+    red: document.getElementById('car-red'),
+    black: document.getElementById('car-black'),
+    blue: document.getElementById('car-blue'),
+    yellow: document.getElementById('car-yellow'),
+    gray: document.getElementById('car-gray'),
+    green: document.getElementById('car-green'),
+    white: document.getElementById('car-green'),
+    blue: document.getElementById('car-purple'),
+    orange: document.getElementById('car-orange'),
+    other: document.getElementById('car-other')
+};
 const counters = {};
 
 let clickCounts = 0;
