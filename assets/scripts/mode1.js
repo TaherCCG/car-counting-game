@@ -6,12 +6,15 @@ const cars = {
     yellow: document.getElementById('car-yellow'),
     gray: document.getElementById('car-gray'),
     green: document.getElementById('car-green'),
-    white: document.getElementById('car-green'),
-    blue: document.getElementById('car-purple'),
+    white: document.getElementById('car-white'),
+    purple: document.getElementById('car-purple'),
     orange: document.getElementById('car-orange'),
-    other: document.getElementById('car-other')
+    other: document.getElementById('car-other'),
+    emergency: document.getElementById('car-emergency')
 };
-const counters = {};
+const counters = {
+
+};
 
 let clickCounts = 0;
 let totalClicks = 0;
