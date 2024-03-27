@@ -59,90 +59,92 @@
         <header class="container text-center py-5">
             <h1 class="mb-2 title">CAR COUNTING GAME</h1>
             <div class="wrapper">
-                <p class="lead">Count cars of specific colours as they pass by on the road, with adult supervision ensuring safety and guidance. </p>
+                <p class="lead">Count cars of specific colours as they pass by on the road, with adult supervision
+                    ensuring safety and guidance. </p>
             </div>
         </header>
 
-        <!-- Track with cars -->
-        <div class="track" id="track">
-            <div class="start-line"></div>
-            <div class="finish-line"></div>
-            <!-- Cars -->
-            <div class="car-row">
-                <div class="car red" id="car-red">
-                    <span class="counter" id="counter-red">0</span>
+        <section class="container">
+            <!-- Total counter -->
+            <div class="total-counter d-flex">
+                <h3>Total Count: <span id="total-count">0</span></h3>
+                <h3>Emergency Vehicles <span id="emergency-count">0</span> </h3>
+            </div>
+            <!-- Track with cars -->
+            <div class="track" id="track">
+                <div class="start-line"></div>
+                <div class="finish-line"></div>
+                <!-- Cars -->
+                <div class="car-row">
+                    <div class="car red" id="car-red">
+                        <span class="counter" id="counter-red">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car black" id="car-black">
+                        <span class="counter" id="counter-black">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car blue" id="car-blue">
+                        <span class="counter" id="counter-blue">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car yellow" id="car-yellow">
+                        <span class="counter" id="counter-yellow">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car gray" id="car-gray">
+                        <span class="counter" id="counter-gray">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car green" id="car-green">
+                        <span class="counter" id="counter-green">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car white" id="car-white">
+                        <span class="counter" id="counter-white">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car purple" id="car-purple">
+                        <span class="counter" id="counter-purple">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car orange" id="car-orange">
+                        <span class="counter" id="counter-orange">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car other" id="car-other">
+                        <span class="counter" id="counter-other">0</span>
+                    </div>
+                </div>
+                <div class="car-row">
+                    <div class="car emergency" id="car-emergency">
+                        <span class="counter" id="counter-emergency">0</span>
+                    </div>
                 </div>
             </div>
-            <div class="car-row">
-                <div class="car black" id="car-black">
-                    <span class="counter" id="counter-black">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car blue" id="car-blue">
-                    <span class="counter" id="counter-blue">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car yellow" id="car-yellow">
-                    <span class="counter" id="counter-yellow">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car gray" id="car-gray">
-                    <span class="counter" id="counter-gray">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car green" id="car-green">
-                    <span class="counter" id="counter-green">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car white" id="car-white">
-                    <span class="counter" id="counter-white">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car purple" id="car-purple">
-                    <span class="counter" id="counter-purple">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car orange" id="car-orange">
-                    <span class="counter" id="counter-orange">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car other" id="car-other">
-                    <span class="counter" id="counter-other">0</span>
-                </div>
-            </div>
-            <div class="car-row">
-                <div class="car emergency" id="car-emergency">
-                    <span class="counter" id="counter-emergency">0</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Total counter -->
-        <div class="total-counter d-flex">
-            <h3>Total Count: <span id="total-count">0</span></h3>
-            <h3>Emergency Vehicles <span id="emergency-count">0</span> </h3>
-        </div>
-
-        <!-- Buttons for counting cars -->
-        <button class="car-btn__red" id="red-car-btn" data-color="red">Red Car</button>
-        <button class="car-btn__black" id="black-car-btn" data-color="black">Black Car</button>
-        <button class="car-btn__blue" id="blue-car-btn" data-color="blue">Blue Car</button>
-        <button class="car-btn__yellow" id="yellow-car-btn" data-color="yellow">Yellow Car</button>
-        <button class="car-btn__gray" id="gray-car-btn" data-color="gray">Gray Car</button>
-        <button class="car-btn__green" id="green-car-btn" data-color="green">Green Car</button>
-        <button class="car-btn__white" id="white-car-btn" data-color="white">White Car</button>
-        <button class="car-btn__purple" id="purple-car-btn" data-color="purple">Purple Car</button>
-        <button class="car-btn__orange" id="orange-car-btn" data-color="orange">Orange Car</button>
-        <button class="car-btn__other" id="other-car-btn" data-color="other">Other Cars</button>
-        <button class="car-btn__emergency" id="emergency-car-btn" data-color="emergency">Emergency</button>
+            <!-- Buttons for counting cars -->
+            <button class="car-btn__red" id="red-car-btn" data-color="red">Red Car</button>
+            <button class="car-btn__black" id="black-car-btn" data-color="black">Black Car</button>
+            <button class="car-btn__blue" id="blue-car-btn" data-color="blue">Blue Car</button>
+            <button class="car-btn__yellow" id="yellow-car-btn" data-color="yellow">Yellow Car</button>
+            <button class="car-btn__gray" id="gray-car-btn" data-color="gray">Gray Car</button>
+            <button class="car-btn__green" id="green-car-btn" data-color="green">Green Car</button>
+            <button class="car-btn__white" id="white-car-btn" data-color="white">White Car</button>
+            <button class="car-btn__purple" id="purple-car-btn" data-color="purple">Purple Car</button>
+            <button class="car-btn__orange" id="orange-car-btn" data-color="orange">Orange Car</button>
+            <button class="car-btn__other" id="other-car-btn" data-color="other">Other Cars</button>
+            <button class="car-btn__emergency" id="emergency-car-btn" data-color="emergency">Emergency</button>
+        </section>
     </main>
 
 
