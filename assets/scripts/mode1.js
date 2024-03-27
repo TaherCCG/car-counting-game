@@ -1,3 +1,4 @@
+// Constants
 const track = document.getElementById('track');
 const cars = {
     red: document.getElementById('car-red'),
@@ -13,8 +14,22 @@ const cars = {
     emergency: document.getElementById('car-emergency')
 };
 const counters = {
-
+    red: document.getElementById('red-count'),
+    black: document.getElementById('black-count'),
+    blue: document.getElementById('blue-count'),
+    yellow: document.getElementById('yellow-count'),
+    gray: document.getElementById('gray-count'),
+    green: document.getElementById('green-count'),
+    white: document.getElementById('white-count'),
+    purple: document.getElementById('purple-count'),
+    orange: document.getElementById('orange-count'),
+    other: document.getElementById('other-count'),
+    emergency: document.getElementById('emergency-count'),
+    total: document.getElementById('total-count')
 };
+// Console log the cars and counters objects to see their structure
+console.log('cars:', cars);
+console.log('counters:', counters);
 
 let clickCounts = 0;
 let totalClicks = 0;

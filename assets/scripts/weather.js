@@ -5,7 +5,7 @@ Also watched a YouTube video to help me understand how to use the geolocation AP
 */
 
 
-const apiKey = ''; // OpenWeatherMap API key
+const apiKey = 'ded82115c27637b6400c5d44d35d97bf'; // OpenWeatherMap API key
 
 // Function to fetch weather data from OpenWeatherMap API  // reference: https://openweathermap.org/current see also README.md
 // This function is declared with the async keyword to indicate that it is asynchronous and returns a promise. It fetches weather data from the OpenWeatherMap API based on the provided latitude and longitude.
