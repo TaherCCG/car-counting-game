@@ -127,10 +127,10 @@ body {
 .card:hover .wheel {
     animation: spin 1s linear infinite;
 }
-.card:hover .car{
+.card:hover .car-animation {
     animation: bounce 1s infinite;
 }
-.car {
+.car-animation {
     width: 90%;
     height: 100%; 
 }
@@ -228,6 +228,87 @@ body {
 
 }
 
+/* Game Mode 1 styling */
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #ddd;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+
+.start-line,
+.finish-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+.start-line {
+    left: 0;
+}
+
+.finish-line {
+    right: 0;
+}
+
+.car {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: left 1s linear;
+    display: inline-block;
+}
+
+.red {
+    background-image: url('../images/cars/red_car.png');
+}
+
+.black {
+    background-image: url('../images/cars/black_car.png');
+}
+
+.blue {
+    background-image: url('../images/cars/blue_car.png');
+}
+
+.yellow {
+    background-image: url('../images/cars/yellow_car.png');
+}
+
+.gray {
+    background-image: url('../images/cars/gray_car.png');
+}
+
+.green {
+    background-image: url('../images/cars/green_car.png');
+}
+
+.white {
+    background-image: url('../images/cars/white_car.png');
+}
+
+.purple {
+    background-image: url('../images/cars/purple_car.png');
+}
+
+.orange {
+    background-image: url('../images/cars/orange_car.png');
+}
+
+.other {
+    background-image: url('../images/cars/other_car.png');
+}
+
+
+
 @media (min-width: 768px) {
 
     /* Car animation */
@@ -248,12 +329,12 @@ body {
         left: 60%;
     }
 
-    .car {
+    .car- {
         width: 100%;
         height: 95%; 
     }
-    /* End */
-}
+ }
+
 
 @media (min-width: 1199px) {
     
