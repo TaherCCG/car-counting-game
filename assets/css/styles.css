@@ -341,10 +341,78 @@ body {
     margin-top: 20px;
 }
 
+/* Car Buttons */
 .car-btn {
-    margin-right: 10px;
-}
+    width: 75px;
+    margin-right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
 
+    &.car-btn__red {
+        background-color: #ff0000;
+        color: aliceblue;
+    }
+
+    &.car-btn__black {
+        background-color: #000000;
+        color: aliceblue;
+    }
+
+    &.car-btn__blue {
+        background-color: #0000ff;
+        color: aliceblue;
+    }
+
+    &.car-btn__yellow {
+        background-color: #ffff00;
+        color: black;
+    }
+
+    &.car-btn__gray {
+        background-color: #808080;
+        color: black;
+    }
+
+    &.car-btn__green {
+        background-color: #008000;
+        color: aliceblue;
+    }
+
+    &.car-btn__white {
+        background-color: #ffffff;
+        color: black;
+    }
+
+    &.car-btn__purple {
+        background-color: #800080;
+        color: aliceblue;
+    }
+
+    &.car-btn__orange {
+        background-color: #ffa500;
+        color: aliceblue;
+    }
+
+    &.car-btn__other {
+        background-color: #bcafc4;
+        color: black;
+    }
+
+    &.car-btn__emergency {
+        background-color: #ff0000;
+        color: aliceblue;
+        width: 100px;
+    }
+
+    &:hover {
+        background-color: #8d06db;
+        color : aliceblue;
+    }
+
+}
 
 
 @media (min-width: 768px) {
