@@ -8,8 +8,9 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;   
-    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722); /* Default Background */
+    align-items: center;
+    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
+    /* Default Background */
     color: aliceblue;
     font-family: "Kode Mono", monospace, sans-serif;
     font-size: 1rem;
@@ -17,11 +18,11 @@ body {
     text-align: center;
 }
 
-.weather-background {   
-   background-image: url('../images/background/modal-bg.png');
+.weather-background {
+    background-image: url('../images/background/modal-bg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;  
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -32,14 +33,14 @@ body {
 
 /* note: 21/3  add more font classes  */
 .title {
-  font-family: "championship", monospace;
+    font-family: "championship", monospace;
     font-size: 7rem;
     color: rgb(255, 254, 254);
     text-shadow: #7506b6 4px 4px 4px;
-    text-align: center; 
-    line-height: 1;    
+    text-align: center;
+    line-height: 1;
     text-transform: uppercase;
-} 
+}
 
 
 /* Navigation */
@@ -60,7 +61,7 @@ body {
 
 .nav-link {
     margin: 0 10px;
-    color:antiquewhite;
+    color: antiquewhite;
     size: 24px;
 }
 
@@ -77,16 +78,18 @@ body {
 }
 
 .card-body {
-    display: none; /* Hide the .card-body element by default */
+    display: none;
+    /* Hide the .card-body element by default */
 }
 
 /* Car Animation */
 .card-container {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 50px;
     cursor: pointer;
 }
+
 .card {
     position: relative;
     display: flex;
@@ -96,10 +99,10 @@ body {
     border: 1px solid #030000;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.5s;    
+    transition: box-shadow 0.5s;
 }
 
-.btn{
+.btn {
     background-color: #8d06db;
     width: 90%;
     color: aliceblue;
@@ -127,15 +130,17 @@ body {
 .card:hover .wheel {
     animation: spin 1s linear infinite;
 }
+
 .card:hover .car-animation {
     animation: bounce 1s infinite;
 }
+
 .car-animation {
     width: 90%;
-    height: 100%; 
+    height: 100%;
 }
 
-.wheel {  
+.wheel {
     width: 90px;
     height: 90px;
 }
@@ -155,27 +160,40 @@ body {
 
 /* Key Frames for animation */
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-2px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
 }
 
 
 .modal {
     display: none;
-    position: fixed;   
+    position: fixed;
     padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    backdrop-filter: blur(20px);   
-    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
     position: relative;
     margin: auto 0;
@@ -194,10 +212,12 @@ body {
     font-size: 2rem;
     color: #fafafa;
     text-shadow: #7e03f8 2px 2px 2px;
-    text-align: center; 
-    line-height: 1;    
+    text-align: center;
+    line-height: 1;
     text-transform: uppercase;
-};
+}
+
+;
 
 .modal-header {
     display: flex;
@@ -206,12 +226,14 @@ body {
     padding: 10px;
     border-bottom: 1px solid #8d06db;
 }
+
 .modal-footer-about {
     display: flex;
     justify-content: space-between;
     margin-top: 20px 20px;
     color: aliceblue;
 }
+
 .modal-footer-content {
     display: flex;
     justify-content: space-between;
@@ -219,11 +241,11 @@ body {
 }
 
 .modal-footer-content a {
-  
+
     background-color: #8d06db;
     padding: 10px;
     margin: auto 0;
-    cursor: pointer;    
+    cursor: pointer;
     transition: background-color 0.5s;
 
 }
@@ -307,22 +329,38 @@ body {
     background-image: url('../images/cars/other_car.png');
 }
 
+/* Placed counter behind the car */
+.counter {
+    position: absolute;
+    bottom: 2;
+    left: -15%;
+    transform: translateX(40%);
+}
+
+.total-counter {
+    margin-top: 20px;
+}
+
+.car-btn {
+    margin-right: 10px;
+}
+
 
 
 @media (min-width: 768px) {
 
     /* Car animation */
-    .wheel {  
+    .wheel {
         width: 70px;
         height: 70px;
     }
-    
+
     .wheel1 {
         position: absolute;
         top: 55%;
-        left: 13%;    
+        left: 13%;
     }
-    
+
     .wheel2 {
         position: absolute;
         top: 55%;
@@ -331,29 +369,30 @@ body {
 
     .car- {
         width: 100%;
-        height: 95%; 
+        height: 95%;
     }
- }
+}
 
 
 @media (min-width: 1199px) {
-    
+
     /* Car Animation */
-    .wheel {  
+    .wheel {
         width: 100px;
         height: 100px;
     }
-    
+
     .wheel1 {
         position: absolute;
         top: 50%;
-        left: 17%;    
+        left: 17%;
     }
-    
+
     .wheel2 {
         position: absolute;
         top: 50%;
         left: 64%;
     }
-    /* End */     
+
+    /* End */
 }
