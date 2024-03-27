@@ -31,9 +31,36 @@ const counters = {
 console.log('cars:', cars);
 console.log('counters:', counters);
 
-let clickCounts = 0;
-let totalClicks = 0;
+const winningPosition = 100;
 
+let positions = {
+    red: 0,
+    black: 0,
+    blue: 0,
+    yellow: 0,
+    gray: 0,
+    green: 0,
+    white: 0,
+    purple: 0,
+    orange: 0,
+    other: 0,
+};
+
+let clickCounts = {
+    red: 0,
+    black: 0,
+    blue: 0,
+    yellow: 0,
+    gray: 0,
+    green: 0,
+    white: 0,
+    purple: 0,
+    orange: 0,
+    other: 0,
+};
+
+let emergencyCount = 0;
+let totalClicks = 0;
 
 // Function to move a car
 function moveCar(color) { };
