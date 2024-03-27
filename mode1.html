@@ -55,6 +55,14 @@
 
     <!-- Main content -->
     <main>
+        <!-- Header -->
+        <header class="container text-center py-5">
+            <h1 class="mb-2 title">CAR COUNTING GAME</h1>
+            <div class="wrapper">
+                <p class="lead">Count cars of specific colours as they pass by on the road, with adult supervision ensuring safety and guidance. </p>
+            </div>
+        </header>
+
         <!-- Track with cars -->
         <div class="track" id="track">
             <div class="start-line"></div>
@@ -94,7 +102,7 @@
                 <div class="car white" id="car-white">
                     <span class="counter" id="counter-white">0</span>
                 </div>
-            </div>  
+            </div>
             <div class="car-row">
                 <div class="car purple" id="car-purple">
                     <span class="counter" id="counter-purple">0</span>
@@ -118,8 +126,9 @@
         </div>
 
         <!-- Total counter -->
-        <div class="total-counter">
-            Total Count: <span id="total-count">0</span>
+        <div class="total-counter d-flex">
+            <h3>Total Count: <span id="total-count">0</span></h3>
+            <h3>Emergency Vehicles <span id="emergency-count">0</span> </h3>
         </div>
 
         <!-- Buttons for counting cars -->
