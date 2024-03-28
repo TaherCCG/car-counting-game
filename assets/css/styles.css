@@ -256,7 +256,6 @@ body {
     position: relative;
     width: 100%;
     height: 450px;
-    /* background-color: #ddd; */
     background-image: url('../images/cars/track.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,29 +305,13 @@ body {
     background-image: url('../images/cars/blue_car.png');
 }
 
-/* .yellow {
-    background-image: url('../images/cars/yellow_car.png');
-} */
-
 .gray {
     background-image: url('../images/cars/gray_car.png');
 }
 
-/* .green {
-    background-image: url('../images/cars/green_car.png');
-} */
-
 .white {
     background-image: url('../images/cars/white_car.png');
 }
-
-/* .purple {
-    background-image: url('../images/cars/purple_car.png');
-}
-
-.orange {
-    background-image: url('../images/cars/orange_car.png');
-} */
 
 .other {
     background-image: url('../images/cars/purple_car.png');
@@ -378,35 +361,15 @@ body {
         color: aliceblue;
     }
 
-    /* &.car-btn__yellow {
-        background-color: #ffff00;
-        color: black;
-    } */
-
     &.car-btn__gray {
         background-color: #808080;
         color: black;
     }
 
-    /* &.car-btn__green {
-        background-color: #008000;
-        color: aliceblue;
-    } */
-
     &.car-btn__white {
         background-color: #ffffff;
         color: black;
     }
-
-    /* &.car-btn__purple {
-        background-color: #800080;
-        color: aliceblue;
-    }
-
-    &.car-btn__orange {
-        background-color: #ffa500;
-        color: aliceblue;
-    } */
 
     &.car-btn__other {
         background-color: #bcafc4;
@@ -426,6 +389,8 @@ body {
 }
 
 
+
+/*  Responsive Design for Car Animation */
 @media (min-width: 768px) {
 
     /* Car animation */
@@ -446,7 +411,7 @@ body {
         left: 60%;
     }
 
-    .car- {
+    .car-animation {
         width: 100%;
         height: 95%;
     }

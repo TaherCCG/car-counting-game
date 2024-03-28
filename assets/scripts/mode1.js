@@ -1,3 +1,4 @@
+
 // Constants
 const track = document.getElementById('track');
 const cars = {
@@ -70,7 +71,14 @@ function moveCar(color) {
 };
 
 // Function to update click counts
-function updateClickCounts() { };
+function updateClickCounts() { 
+    clickCounts[color]++;
+    totalClicks++;
+    counters[color].innerText=clickCounts[color];
+    counters.total.innerText=totalClicks;
+    console.log(clickCounts);
+    console.log(totalClicks);
+};
 
 // Function to play sound
 function playSound(sound) { };
@@ -83,6 +91,7 @@ carButtons.forEach(function(button){
     button.addEventListener('click',function(){
         const color=this.getAttribute('data-color');
         moveCar(color);
+        updateClickCounts(color);
     });
 });
 
