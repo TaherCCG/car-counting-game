@@ -48,19 +48,19 @@ let emergencyCount = 0;
 let totalClicks = 0;
 
 // Function to move a car
-function moveCar(color) { 
-    const newPosition = positions[color] + 10; 
-    positions[color] = newPosition; 
+function moveCar(color) {
+    const newPosition = positions[color] + 10;
+    positions[color] = newPosition;
     cars[color].style.left = newPosition + 'px';
 };
 
 // Function to update click counts
-function updateClickCounts(color) { 
+function updateClickCounts(color) {
     clickCounts[color]++;
     totalClicks++;
-    counters[color].innerText=clickCounts[color];
-    counters.total.innerText=totalClicks;
-    counters.emergency.innerText=emergencyCount;
+    counters[color].innerText = clickCounts[color];
+    counters.total.innerText = totalClicks;
+    counters.emergency.innerText = emergencyCount;
     console.log(clickCounts);
     console.log(totalClicks);
 };
@@ -71,10 +71,10 @@ function playSound(sound) { };
 // Function to set up event listeners
 function setupEventListeners() { };
 
-const carButtons=document.querySelectorAll('.car-btn');
-carButtons.forEach(function(button){
-    button.addEventListener('click',function(){
-        const color=this.getAttribute('data-color');
+const carButtons = document.querySelectorAll('.car-btn');
+carButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        const color = this.getAttribute('data-color');
         moveCar(color);
         updateClickCounts(color);
     });
