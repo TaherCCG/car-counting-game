@@ -88,3 +88,33 @@ describe('setupEventListeners function', () => {
     });
 });
 
+jest.clearAllMocks();
+
+const { moveCar, updateClickCounts } = require('../mode1.js');
+
+describe('moveCar function', () => {
+  let positions;
+
+  // Reset positions before each test
+  beforeEach(() => {
+    positions = {
+      red: 0,
+      black: 0,
+      blue: 0,
+      gray: 30,
+      white: 0,
+      other: 0,
+    };
+  });
+
+  test('moves a red correctly', () => {
+    const color = 'red';
+    moveCar(color);
+    expect(positions[color]).toBe(0);
+  });
+  test('moves a gray correctly', () => {
+    const color = 'gray';
+    moveCar(color);
+    expect(positions[color]).toBe(30);
+  });
+});
