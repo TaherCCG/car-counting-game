@@ -49,10 +49,16 @@ let totalClicks = 0;
 
 // Function to move a car
 function moveCar(color) {
-    const newPosition = positions[color] + 10;
-    positions[color] = newPosition;
-    cars[color].style.left = newPosition + 'px';
-};
+    playSound('assets/sounds/car-double-horn.wav');
+    if (cars[color]) {
+        const newPosition = positions[color] + 10;
+        positions[color] = newPosition;
+        cars[color].style.left = newPosition + 'px';
+    } else {
+        console.error('Invalid color:', color);
+    }
+}
+
 
 // Function to update click counts
 function updateClickCounts(color) {
@@ -66,7 +72,10 @@ function updateClickCounts(color) {
 };
 
 // Function to play sound
-function playSound(sound) { };
+function playSound(soundFile) { 
+    const sound = new Audio(soundFile);
+    sound.play();
+};
 
 // Function to set up event listeners
 function setupEventListeners() { };
@@ -80,6 +89,5 @@ carButtons.forEach(function (button) {
     });
 });
 
-module.exports = { moveCar, updateClickCounts };
 
 
