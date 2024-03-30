@@ -26,11 +26,11 @@
     <title>Car Counting Game</title>
 </head>
 
-<body>
+<body class="weather-background">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand kode-mono-title" href="index.html">Car Counting Game</a>
+            <a class="navbar-brand" href="index.html">Car Counting Game</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,33 +38,39 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#info-button"><i
-                                class="fa-brands fa-dev fa-3x"></i></a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#info-button"><i class="fa-solid fa-screwdriver-wrench fa-2x"></i></a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="weather-info">
+                <p id="weather-description"></p>
             </div>
         </div>
     </nav>
 
+<main>
 
+
+    <!-- Header -->
     <header class="container text-center py-5">
-        <h1 class="mb-3 kode-mono-title">Car Counting Game</h1>
-        <p class="lead kode-mono-title">Enjoy a fun and educational car counting game! Test your skills by counting cars
-            based on
-            colour, identifying different vehicle types, and recognising car brands. Perfect for children to enhance
-            cognitive abilities while having fun.</p>
+        <h1 class="mb-2 title">CAR COUNTING GAME</h1>
+        <div class="wrapper">
+            <p class="lead">Enjoy a fun and educational car counting game! Test your skills by counting cars
+                based on colour, identifying different vehicle types, and recognising car brands. Perfect for children
+                to
+                enhance cognitive abilities while having fun.</p>
+        </div>
     </header>
 
-
-    <section class="container game-mode py-5">
+    <!-- Game Modes -->
+    <section class="container game-mode py-2">
         <h2 class="text-center mb-4">Choose a Game Mode</h2>
         <div class="row justify-content-center card-container">
-            <div class=" col-lg-6 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card justify-content-center" id="card1">
-
                     <div class="card-animation">
-
-                        <img src="assets/images/car7.png" alt="Car" class="car">
+                        <img src="assets/images/car7.png" alt="Car" class="car-animation">
                         <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel1">
                         <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel2">
                     </div>
@@ -72,81 +78,72 @@
                     <div class="card-body mode1">
                         <p id="par1">Count cars of specific colours as they pass by on the road, with adult
                             supervision ensuring safety and guidance. The activity builds cognitive skills by
-                            challenging players to focus, observe, and distinguish between different coloured
-                            vehicles. As children engage in this game, they develop their ability to categorise and
-                            identify objects, promoting cognitive growth in a fun and interactive way.</p>
-                        <!-- <button class="btn btn-primary" id="playMode1">Play</button> -->
+                            challenging
+                            players to focus, observe, and distinguish between different coloured vehicles. As children
+                            engage in this game, they develop their ability to categorise and identify objects,
+                            promoting cognitive growth in a fun and interactive way.</p>
                     </div>
-                    <button class="btn btn-primary al" id="playMode1">Play</button>
+                    <button class="btn btn-primary" id="playMode1">Play</button>
                 </div>
-
             </div>
-
-            <div class=" col-lg-6 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card justify-content-center" id="card2">
-
                     <div class="card-animation">
-
-                        <img src="assets/images/car7.png" alt="Car" class="car">
+                        <img src="assets/images/car7.png" alt="Car" class="car-animation">
                         <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel1">
                         <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel2">
                     </div>
                     <h3 class="card-title text-center">Car Counter Mode 2</h3>
                     <div class="card-body mode2">
-                        <!-- <h3 class="card-title text-center">Car Counter Mode 2</h3> -->
                         <p id="par2">
-                            Count cars as they move across the screen, with the level
-                            increasing as the count rises. As players progress, the challenge intensifies by
-                            introducing cars of various colours. This encourages children to not only count but also
-                            identify and tally cars based on their hues. With each level presenting a mix of
-                            differently coloured cars, players sharpen their attention and colour recognition skills
-                            while having fun.</p>
-                        <!-- <button class="btn btn-primary" id="playMode2">Play</button> -->
+                            Count cars as they move across the screen, with the level increasing as the count rises. As
+                            players progress, the challenge intensifies by introducing cars of various colours. This
+                            encourages children to not only count but also identify and tally cars based on their hues.
+                            With each level presenting a mix of differently coloured cars, players sharpen their
+                            attention and colour recognition skills while having fun.</p>
                     </div>
                     <button class="btn btn-primary" id="playMode2">Play</button>
                 </div>
-
             </div>
         </div>
     </section>
 
+</main>
 
-
+    <!-- Developer Info Modal -->
     <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="info-button-label" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
+            <div class="modal-content overlay">
                 <div class="modal-header">
-                    <h3 class="modal-title text-center" id="info-button-label">This game was developed by:</h3>
+                    <h4 class="modal-title" id="info-button-label">About</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <h4 class="text-center">Taher Mahmood</h4>
-                </div>
-                <!-- Modal Footer -->
                 <div class="modal-footer">
-                    <div class="modal-footer-content text-center">
+                    <div class="modal-footer-about">
+                        <h5>Game developed by:</h5>
+                        <h6 class="font-title">Taher Mahmood</h6>
+                    </div>
+                    <div class="modal-footer-content">
                         <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fa-brands fa-github fa-2x"></i></a>
+                                class="fab fa-github fa-2x"></i></a>
                         <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fa-brands fa-linkedin fa-2x"></i></a>
+                                class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </aside>
 
-
+    <!-- JavaScript -->
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- JS file -->
-    <script src="assets/scripts/menu.js"></script>
     <!-- Bootstrap 5.3.2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
-
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript file -->
+    <script src="assets/scripts/weather.js"></script>
+    <script src="assets/scripts/menu.js"></script>
 
 </body>
 
