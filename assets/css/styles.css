@@ -252,7 +252,7 @@ body {
 
 /* Game Mode 1 styling */
 
-.track {
+#track {
     position: relative;
     width: 100%;
     height: 450px;
@@ -262,6 +262,7 @@ body {
     background-position: center;
     overflow: hidden;
     margin-bottom: 20px;
+    /* margin: 0 auto; */
 }
 
 
@@ -387,6 +388,45 @@ body {
         color : aliceblue;
     }
 }
+
+/* Game Mode 2 styling */
+
+#road {
+    width: 100%; /* Set the width of the road */
+    height: 100%; /* Set the height of the road */
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main-counter {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color:antiquewhite;
+
+}
+#score, #life-bar {
+    font-size: 2rem;
+    font-weight: 700;
+}
+#life-bar span {
+    font-weight: bolder;
+    color: blueviolet;
+    background-color: #050505;
+}
+
+
+
+
+
+
 
 
 
