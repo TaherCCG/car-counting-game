@@ -62,24 +62,29 @@
                 <p class="lead">Count cars of specific colours as they pass by on the screen. </p>
             </div>
         </header>
-
-        <section id="game-container" class="container">
+        <!-- Game Container Section -->
+        <section id="game-container" >
             <div class="main-counter">
                 <div id="score">Score: <span id="scoreValue">0</span></div>
                 <div id="life-bar">Life: <span id="lifeValue">-----</span></div>
             </div>
+            <!-- Main Track / Road -->
             <div id="track">
                 <div class="start-line"></div>
                 <div class="finish-line"></div>
-                <div id="road"></div> <!-- Road where cars will move -->
+                <!-- Cars will move on road -->
+                <div id="road"></div> 
             </div>
+            <!-- Buttons -->
             <div id="color-buttons">
                 <button class="car-btn car-btn__red" data-color="red">Red</button>
                 <button class="car-btn car-btn__blue" data-color="blue">Blue</button>
                 <button class="car-btn car-btn__black" data-color="black">Black</button>
                 <button class="car-btn car-btn__white" data-color="white">White</button>
             </div>
+            <!-- Start Button -->
             <button id="start-button">Start</button>
+            <!-- Counters -->
             <div id="counters">
                 <div>Total Cars Passed: <span id="totalPassed">0</span></div>
                 <div>Total Cars Clicked: <span id="totalClicked">0</span></div>
