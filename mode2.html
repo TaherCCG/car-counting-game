@@ -26,6 +26,7 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/mode2.css">
     <title>Car Counting Game</title>
 </head>
 
@@ -63,28 +64,21 @@
             </div>
         </header>
         <!-- Game Container Section -->
-        <section id="game-container" >
-            <div class="main-counter">
+        <div id="game-container">
+            <div class ="scoreLife">
                 <div id="score">Score: <span id="scoreValue">0</span></div>
                 <div id="life-bar">Life: <span id="lifeValue">-----</span></div>
             </div>
-            <!-- Main Track / Road -->
             <div id="track">
-                <div class="start-line"></div>
-                <div class="finish-line"></div>
-                <!-- Cars will move on road -->
-                <div id="road"></div> 
+                <div id="road"></div> <!-- Road where cars will move -->
             </div>
-            <!-- Buttons -->
             <div id="color-buttons">
-                <button class="car-btn car-btn__red" data-color="red">Red</button>
-                <button class="car-btn car-btn__blue" data-color="blue">Blue</button>
-                <button class="car-btn car-btn__black" data-color="black">Black</button>
-                <button class="car-btn car-btn__white" data-color="white">White</button>
+                <button class="color-button" data-color="red">Red</button>
+                <button class="color-button" data-color="blue">Blue</button>
+                <button class="color-button" data-color="black">Black</button>
+                <button class="color-button" data-color="white">White</button>
             </div>
-            <!-- Start Button -->
             <button id="start-button">Start</button>
-            <!-- Counters -->
             <div id="counters">
                 <div>Total Cars Passed: <span id="totalPassed">0</span></div>
                 <div>Total Cars Clicked: <span id="totalClicked">0</span></div>
@@ -92,9 +86,9 @@
                 <div>Red Cars: <span id="redCount">0</span></div>
                 <div>Blue Cars: <span id="blueCount">0</span></div>
                 <div>Black Cars: <span id="blackCount">0</span></div>
-                <div>White Cars: <span id="whiteCount">0</span></div>
+                <div>Yellow Cars: <span id="whiteCount">0</span></div>
             </div>
-        </section>
+        </div>
 
 
 
