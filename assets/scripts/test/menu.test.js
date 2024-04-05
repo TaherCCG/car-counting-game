@@ -90,7 +90,7 @@ describe('setupEventListeners function', () => {
 
 jest.clearAllMocks();
 
-const { moveCar, updateClickCounts } = require('../mode1.js');
+const { moveCar } = require('../mode1.js');
 
 describe('moveCar function', () => {
   let positions;

@@ -91,3 +91,4 @@ carButtons.forEach(function (button) {
 
 
 
+module.exports = { moveCar };
