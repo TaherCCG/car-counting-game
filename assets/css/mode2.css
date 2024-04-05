@@ -1,0 +1,106 @@
+/* Basic CSS styling for Car Counting Game */
+
+/* Track  */
+#track {
+    width: 80%; 
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid #020800; 
+    position: relative; 
+    background: url('../images/cars/track.png') repeat center center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#road {
+    width: 100%;
+    height: 100%;
+}
+
+.car {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    border-radius: 10px; 
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  for testing if image is not displayed */
+}
+
+.red {
+    background-image: url('../images/cars/red_car.png'); 
+    background-size: cover;
+}
+
+.blue {
+    background-image: url('../images/cars/blue_car.png');
+    background-size: cover;
+}
+
+.black {
+    background-image: url('../images/cars/black_car.png');
+    background-size: cover;
+}
+
+.white {
+    background-image: url('../images/cars/white_car.png'); 
+    background-size: cover;
+}
+
+#game-container {
+    height: 100vh;
+    padding: 20px;
+}
+
+#score,
+#life-bar {
+    font-size: 2rem;
+    margin-top: 0;
+    
+}
+
+.scoreLife {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+
+}
+
+#life-bar {
+    position: absolute;    
+    right: 15%;
+}
+
+#life-bar span {
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+#color-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.color-button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#start-buttons {
+    margin-top: auto; 
+}
+
+#start-button {
+    font-size: 16px;
+}
+
+#statistics {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#statistics p {
+    margin-bottom: 5px;
+}

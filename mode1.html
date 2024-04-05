@@ -25,7 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 
     <!-- CSS Stylesheet -->
+    <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Game Mode style sheet -->
+    <link rel="stylesheet" href="assets/css/mode1.css">
     <title>Car Counting Game</title>
 </head>
 
@@ -33,7 +36,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Car Counting Game</a>
+            <a class="navbar-brand" href="index.html" aria-labelledby="Takes you to main menu page" >Car Counting Game</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,7 +74,7 @@
                 <h3>Emergency Vehicles <span id="emergency-count">0</span> </h3>
             </div>
             <!-- Track with cars -->
-            <div class="track" id="track">
+            <div id="track">
                 <div class="start-line"></div>
                 <div class="finish-line"></div>
                 <!-- Cars -->
