@@ -1,11 +1,11 @@
-/* This script fetches weather data from the OpenWeatherMap API based on the user's current location and updates the weather description on the webpage. It also changes the background image or color based on the weather description.
+/* This script fetches weather data from the OpenWeatherMap API based on the user's current location and updates the weather description on the webpage. It also changes the background image based on the weather description.
 Followed guide from documentation: https://openweathermap.org/current to get the weather data. 
 https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API to create the script to get current location.
 Also watched a YouTube video to help me understand how to use the geolocation API: https://www.youtube.com/watch?v=VK9F8BWrOgY&t=204s
 */
 
 
- // OpenWeatherMap API key  - Used https://www.obfuscator.io/ to hide the API Key
+// OpenWeatherMap API key  - Used https://www.obfuscator.io/ to hide the API Key
 function _0x1f4e() {
   const _0x1eebf9 = ['168RGLoKb', '1315908kZXpLt', 'ded82115c27637b6400c5d44d35d97bf', '140DwdcPe', '9FBzkoF', '161469AOjTpZ', '1206NvXEZk', '4607465fLTpwe', '11779020dZerxo', '1218707KTAatS', '716aBcMyO', '40DRzeXT', '76251cTOaMT'];
   _0x1f4e = function () { return _0x1eebf9; }; return _0x1f4e();
@@ -32,18 +32,17 @@ function _0x17a3(_0x48a7c8, _0x5c1c3d) {
 }(_0x1f4e, 0x9ff97));
 const apiKey = _0x45de31(0x1e7);
 
-
-
 /* Function to fetch weather data from OpenWeatherMap API reference: https://openweathermap.org/current see also README.md
-This function is declared with the async keyword to indicate that it is asynchronous and returns a promise. It fetches weather data from the OpenWeatherMap API based on the provided latitude and longitude. */
+This function is declared with the async keyword to indicate that it is asynchronous and returns a promise. 
+It fetches weather data from the OpenWeatherMap API based on the provided latitude and longitude. */
 async function getWeather(latitude, longitude) {
   try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`);  // reference: https://openweathermap.org/current  see also README.md
     const data = await response.json();
     console.log(data);  // Log the weather data to the console
 
-    // Get the weather description
-    const weatherDescription = data.weather[0].description;    // reference: https://openweathermap.org/weather-conditions  see also README.md
+    // Get the weather description - reference: https://openweathermap.org/weather-conditions  see also README.md
+    const weatherDescription = data.weather[0].description;
 
     // Update the weather description on the webpage
     document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
@@ -74,12 +73,11 @@ function changeBackground(weatherDescription) {
 
 
   // Set background based on weather description
-
-  body.classList.remove('weather-background'); // Remove the class in case it was previously set
+  body.classList.remove('weather-background');
 
   if (backgrounds.hasOwnProperty(weatherLower)) {
-    body.style.backgroundImage = backgrounds[weatherLower]; // Set the background image
-    body.classList.add('weather-background'); // Add the class to apply additional styling
+    body.style.backgroundImage = backgrounds[weatherLower];
+    body.classList.add('weather-background');
   }
 }
 
