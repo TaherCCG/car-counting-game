@@ -1,14 +1,6 @@
-// Define sound sources
-const soundSources = {
-    sound1: "assets/sounds/short-car-ignition.wav",
-    sound2: "assets/sounds/car-double-horn.wav"
-};
+document.addEventListener('DOMContentLoaded', function() {
 
-// Function to play sound
-function playSound(sound) {
-    const audio = new Audio(soundSources[sound]);
-    audio.play();
-}
+
 // Function to set up event listeners
 function setupEventListeners() {
     const card1 = document.getElementById('card1');
@@ -50,7 +42,11 @@ function setupEventListeners() {
         });
     }
 }
+// Call setupEventListeners when DOM is ready
 
+    setupEventListeners();
+    
+});
 /*  
 ---------------------------------------------------------------------------------
 Version 1  
@@ -97,11 +93,6 @@ $(document).ready(function () {
     setupEventListeners();
 });
  ---------------------------------END------------------------------------------------*/
-
-// Call setupEventListeners when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    setupEventListeners();
-});
 
 // Export the functions
 module.exports = { playSound, setupEventListeners };
