@@ -2,7 +2,7 @@
 const soundSources = {
     sound1: "assets/sounds/short-car-ignition.wav",
     sound2: "assets/sounds/car-double-horn.wav",
-
+    police: "assets/sounds/police-siren.mp3"
 };
 
 // Function to play sound
