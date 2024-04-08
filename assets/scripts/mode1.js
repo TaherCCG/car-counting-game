@@ -49,7 +49,7 @@ let totalClicks = 0;
 
 // Function to move a car
 function moveCar(color) {
-    playSound('assets/sounds/car-double-horn.wav');
+    playSound('sound2');
     if (cars[color]) {
         const newPosition = positions[color] + 10;
         positions[color] = newPosition;
@@ -72,10 +72,10 @@ function updateClickCounts(color) {
 };
 
 // Function to play sound
-function playSound(soundFile) { 
-    const sound = new Audio(soundFile);
-    sound.play();
-};
+// function playSound(soundFile) { 
+//     const sound = new Audio(soundFile);
+//     sound.play();
+// };
 
 // Function to set up event listeners
 function setupEventListeners() { };
