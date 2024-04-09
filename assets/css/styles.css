@@ -170,15 +170,36 @@ body {
     font-size: 2rem;
     color: rgb(243, 113, 7);
     text-shadow: #7506b6 4px 4px 4px;
+    text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
         background-color: #7506b6;
         transition: 5s;
         letter-spacing: 1em;
-    }
-  
+    }  
 }
 
+.modal-button {
+    background-color: #330250;
+    width:100%;
+    padding: 10px;
+    margin: auto 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-family: "championship", monospace;
+    font-size: 1.5rem;
+    color: rgb(243, 113, 7);
+    text-shadow: #7506b6 4px 4px 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #9805ee;
+        transition: 5s;
+        letter-spacing: 0.5em;
+    }  
+}
 .card:hover {
     box-shadow: 0 0 100px rgba(56, 1, 73, 0.781);
 }
