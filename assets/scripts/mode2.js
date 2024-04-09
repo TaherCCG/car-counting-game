@@ -31,7 +31,7 @@ function updateScore() {
 // Function to update level counter. It will be called every time the player reaches a new level and will be displayed in the game over modal
 function updateLevel() {
     document.getElementById('levelValue').textContent = levelReached;
-    document.getElementById('level-reached').textContent = levelReached; 
+    document.getElementById('level-reached').textContent = levelReached;
 }
 // Function to animate car movement
 function animateCar(car) {
@@ -48,26 +48,28 @@ function animateCar(car) {
                 document.getElementById('totalNotClicked').textContent = totalNotClicked;
                 life--;
                 document.getElementById('lifeValue').textContent = '-'.repeat(life);
-                
+
                 if (life === 0) {
                     playSound('gameOver');
-                    // Open the modal
-                    const modal = document.getElementById("myModal");
+                    // Open the modal when the game is over to display the final score and level reached.
+                    const modal = document.getElementById("end-game-modal");
                     modal.style.display = "block";
-    
-                    // When the user clicks on <span> (x), close the modal
-                    const span = document.getElementsByClassName("close")[0];
-                    span.onclick = function() {
+
+                    // When the user clicks on "Close Game" button, close the modal.
+                    const closeGameButton = document.getElementById("closeGame");
+                    closeGameButton.addEventListener("click", function () {
+                        // Close the modal
                         modal.style.display = "none";
                         location.reload();
-                    }
+                    });
+
+                    // When the user clicks on "Go to Index" button, go to index.html
+                    const goToIndexButton = document.getElementById("goToIndex");
+                    goToIndexButton.addEventListener("click", function () {
+                        // Redirect to index.html
+                        window.location.href = "index.html";
+                    });
                 }
-                
-                // if (life === 0) {
-                //     playSound('gameOver');
-                //     alert('Game Over');
-                //     location.reload();                                  
-                // }    og code
             }
 
             car.remove(); // Remove the car element
@@ -109,7 +111,7 @@ function checkSpeedAndInterval() {
         levelReached++;
         updateLevel();
         carSpeed += 1;
-        carCreationInterval -=100;
+        carCreationInterval -= 100;
         clearInterval(carCreationIntervalId);
         startGame();
     }
