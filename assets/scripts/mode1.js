@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log('cars:', cars);
     console.log('counters:', counters);
 
-    const winningPosition = 600;
-    let isWinnerDeclared = false;
+    // const winningPosition = 600;
+    // let isWinnerDeclared = false;
 
     let hasStarted = {
         red: false,
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         gray: false,
         white: false,
         other: false,
-        police: false // Add police flag
     };
 
     let positions = {
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         other: 0,
     };
 
-    let emergencyCount = 0;
     let totalClicks = 0;
 
     // Function to move a car
@@ -89,17 +87,17 @@ document.addEventListener("DOMContentLoaded", function () {
         positions[color] = newPosition;
         cars[color].style.left = `${newPosition}px`;
 
-        if (newPosition >= winningPosition && !isWinnerDeclared) {
-            declareWinner(color);
-        }
+        // if (newPosition >= winningPosition && !isWinnerDeclared) {
+        //     declareWinner(color);
+        // }
     }
 
 
     // Function to declare the winner
-    function declareWinner(color) {
-        isWinnerDeclared = true;
-        alert(`${color.toUpperCase()} Car Wins!`);
-    }
+    // function declareWinner(color) {
+    //     isWinnerDeclared = true;
+    //     alert(`${color.toUpperCase()} Car Wins!`);
+    // }
 
     // Function to update click counts
     function updateClickCounts(color) {
@@ -112,17 +110,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Event listener for button clicks
+
     const carButtons = document.querySelectorAll(".car-btn");
     carButtons.forEach(button => {
         button.addEventListener("click", function () {
             const color = this.getAttribute("data-color");
-            if (!isWinnerDeclared) {
+            if (totalClicks <= 100) {
                 moveCar(color); // Call moveCar
                 updateClickCounts(color); // Call updateClickCounts
                 previousPositions[color] = positions[color]; // Update previous position
+                if (totalClicks >= 100) {
+                    declareGameOver();
+                }
             }
         });
     });
+
+    function declareGameOver() {
+        alert("Game Over! Maximum clicks reached.");
+    }
 });
 
 
