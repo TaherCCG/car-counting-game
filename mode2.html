@@ -31,46 +31,50 @@
 </head>
 
 <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Car Counting Game</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#info-button"><i
-                                class="fa-solid fa-screwdriver-wrench fa-2x"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="weather-info">
-                <p id="weather-description"></p>
-            </div>
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="link" href="index.html">
+                        HOME
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Header -->
+            <header class="mx-auto text-center">
+                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+            </header>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#info-button">
+                        SETTINGS
+                        <i class="fa-solid fa-warehouse"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
-
     <!-- Main content -->
     <main>
-        <!-- Header -->
-        <header class="container text-center py-5">
-            <h1 class="mb-2 title">CAR COUNTING GAME</h1>
-            <div class="wrapper">
-                <p class="lead">Count cars of specific colours as they pass by on the screen. </p>
-            </div>
-        </header>
+
+        <div class="container">
+            <p class="lead">Count cars of specific colours as they pass by on the screen. </p>
+        </div>
+
         <!-- Game Container Section -->
-        <div id="game-container">
-            <div class ="scoreLife">
+
+        <section class="" id="game-container">
+            <div class="scoreLife container">
+                <div id="level">Level: <span id="levelValue">0</span></div>
                 <div id="score">Score: <span id="scoreValue">0</span></div>
                 <div id="life-bar">Life: <span id="lifeValue">-----</span></div>
             </div>
+            <!-- Road where cars will move -->
             <div id="track">
-                <div id="road"></div> <!-- Road where cars will move -->
+                <div id="road"></div>
             </div>
             <div id="color-buttons">
                 <button class="color-button" data-color="red">Red</button>
@@ -78,56 +82,106 @@
                 <button class="color-button" data-color="black">Black</button>
                 <button class="color-button" data-color="white">White</button>
             </div>
-            <button id="start-button">Start</button>
-            <div id="counters">
-                <div>Total Cars Passed: <span id="totalPassed">0</span></div>
-                <div>Total Cars Clicked: <span id="totalClicked">0</span></div>
-                <div>Total Cars Not Clicked: <span id="totalNotClicked">0</span></div>
-                <div>Red Cars: <span id="redCount">0</span></div>
-                <div>Blue Cars: <span id="blueCount">0</span></div>
-                <div>Black Cars: <span id="blackCount">0</span></div>
-                <div>Yellow Cars: <span id="whiteCount">0</span></div>
-            </div>
-        </div>
+
+            <button id="start-button" class="short-button">Start</button>
+
+        </section>
 
 
-
-        <!-- Developer Info Modal -->
-        <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="info-button-label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="info-button-label">About</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </main>
+    <!-- Settings and Developer Info Modal -->
+    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="info-button-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header container">
+                    <h4 class="modal-title" id="info-button-label">Settings</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Music Controls -->
+                <div class="modal-body container">
+                    <h5>Music Controls</h5>
+                    <button id="toggleButton">Play Music</button>
+                    <div class="music d-flex">
+                        <h6>Volume</h6>
+                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
                     </div>
-                    <div class="modal-footer">
-                        <div class="modal-footer-about">
-                            <h5>Game developed by:</h5>
-                            <h6 class="font-title">Taher Mahmood</h6>
-                        </div>
-                        <div class="modal-footer-content">
-                            <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                    class="fab fa-github fa-2x"></i></a>
-                            <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                    class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
+                    <div class="effects d-flex">
+                        <h6>Effects Volume</h6>
+                        <input type="range" id="effectsVolumeControl" min="0" max="1" step="0.1" value="0.3">
+                    </div>
+                    <audio id="backgroundMusic" loop>
+                        <source src="assets/sounds/cyberpunk-getaway-car-karl-casey.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <!-- Current Weather forecast -->
+                <div class="modal-body container">
+                    <h5>Current Weather</h5>
+
+                    <div class="weather-info">
+                        <p id="weather-description"></p>
+                    </div>
+                    <!-- <label for="locationCheckbox">Allow access to location</label>
+                    <input type="checkbox" id="locationCheckbox">
+                    <button id="getLocationButton">Get Location</button> -->
+                </div>
+                <!-- About me -->
+                <div class="modal-footer container">
+                    <div class="modal-footer-about d-block">
+                        <h5>Game developed by:</h5>
+                        <h6 class="font-title">Taher Mahmood</h6>
+                    </div>
+                    <div class="modal-footer-content">
+                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
+                                class="fab fa-github fa-2x"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
             </div>
-        </aside>
+        </div>
+    </aside>
 
+    <!-- Game-Over Modal-->
+    <aside id="end-game-modal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-header">
+                    <h4 class="title">Game Over</h4>
+                </div>
+                <div class="modal-body container">
+                    <div id="counters">
+                        <div class="d-none">Total Cars Passed: <span id="totalPassed">0</span></div>
+                        <div>Your Score: <span id="totalClicked">0</span></div>
+                        <div class="d-none">Total Cars Not Clicked: <span id="totalNotClicked">0</span></div>
+                        <div>You Reached Level: <span id="level-reached">0</span></div>
+                        <p>You clicked:</p>
+                        <div>Red Cars: <span id="redCount">0</span></div>
+                        <div>Blue Cars: <span id="blueCount">0</span></div>
+                        <div>Black Cars: <span id="blackCount">0</span></div>
+                        <div>White Cars: <span id="whiteCount">0</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <button id="closeGame" class="modal-button mb-2">Close Window</button>
+                    <button id="goToIndex" class="modal-button mb-2">Home</button>
+                    <!-- <span id="close" class="card-button">CLOSE</span>                    -->
+                </div>
+            </div>
+        </div>
+    </aside>
 
-        <!-- JQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- JS file -->
-        <script src="assets/scripts/mode2.js"></script>
-        <script src="assets/scripts/weather.js"></script>
-        <!-- Bootstrap 5.3.2 JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-            </script>
-
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5.3.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <!-- JavaScript file -->
+    <script src="assets/scripts/weather.js"></script>
+    <script src="assets/scripts/sound-feature.js"></script>
+    <script src="assets/scripts/mode2.js"></script>
 </body>
 
 </html>

@@ -64,7 +64,10 @@
 }
 
 .other {
-    background-image: url('../images/cars/purple_car.png');
+    background-image: url('../images/cars/green_car.png');
+}
+.emergency {
+    background-image: url('../images/cars/yellow_car.png');
 }
 
 /* Placed counter behind the car */
@@ -88,7 +91,7 @@
 
 /* Car Buttons */
 .car-btn {
-    width: 75px;
+    width: 100px;
     margin-right: 20px;
     padding: 10px;
     border: none;
@@ -96,40 +99,40 @@
     cursor: pointer;
     transition: background-color 0.5s;
 
-    &.car-btn__red {
+    &#red-car-btn {
         background-color: #ff0000;
         color: aliceblue;
     }
 
-    &.car-btn__black {
+    &#black-car-btn {
         background-color: #000000;
         color: aliceblue;
     }
 
-    &.car-btn__blue {
+    &#blue-car-btn {
         background-color: #0000ff;
         color: aliceblue;
     }
 
-    &.car-btn__gray {
+    &#gray-car-btn {
         background-color: #808080;
         color: black;
     }
 
-    &.car-btn__white {
+    &#white-car-btn {
         background-color: #ffffff;
         color: black;
     }
 
-    &.car-btn__other {
+    &#other-car-btn {
         background-color: #bcafc4;
         color: black;
     }
 
-    &.car-btn__emergency {
+    &#emergency-car-btn {
         background-color: #ff0000;
         color: aliceblue;
-        width: 100px;
+        width: 150px;
     }
 
     &:hover {
