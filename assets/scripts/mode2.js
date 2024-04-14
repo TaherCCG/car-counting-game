@@ -46,8 +46,8 @@ function animateCar(car) {
             if (!car.clicked) { // Check if the car has not been clicked
                 totalNotClicked++; // Increment total not clicked counter if the car has left the track without being clicked
                 document.getElementById('totalNotClicked').textContent = totalNotClicked;
-                life--;
-                document.getElementById('lifeValue').textContent = '-'.repeat(life);
+                life--; // Decrement life counter
+                document.getElementById('lifeValue').innerHTML = ' &block;'.repeat(life);
 
                 if (life === 0) {
                     playSound('gameOver');
