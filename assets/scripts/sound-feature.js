@@ -33,6 +33,20 @@ const backgroundMusicSrc = 'assets/sounds/cyberpunk-getaway-car-karl-casey.mp3';
 let backgroundMusic = new Audio(backgroundMusicSrc);
 backgroundMusic.muted = true; // Start with background music muted
 
+// Toggle function for sound1 and sound2
+function toggleSounds(isPlaying) {
+    for (const key in sounds) {
+        if (Object.hasOwnProperty.call(sounds, key)) {
+            const sound = sounds[key];
+            if (isPlaying) {
+                sound.muted = false;
+            } else {
+                sound.muted = true;
+            }
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById('toggleButton');
     const volumeControl = document.getElementById('volumeControl');
@@ -75,21 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     effectsVolumeControl.addEventListener('input', function () {
         sounds.effectsVolume = effectsVolumeControl.value;
     });
-
-    // Toggle function for sound1 and sound2
-    function toggleSounds(isPlaying) {
-        for (const key in sounds) {
-            if (Object.hasOwnProperty.call(sounds, key)) {
-                const sound = sounds[key];
-                if (isPlaying) {
-                    sound.muted = false;
-                } else {
-                    sound.muted = true;
-                }
-            }
-        }
-    }
-
 });
 
 
