@@ -8,7 +8,7 @@ let blackCount = 0;
 let whiteCount = 0;
 let life = 5;  // Initial life counter
 let carSpeed = 1; // Initial car speed
-let carCreationInterval = 2000; // Initial car creation interval
+let carCreationInterval = 2000; // Initial car creation interval (2 seconds)
 let levelReached = 0; 
 
 // Function to create a car element and animate its movement
