@@ -104,23 +104,17 @@
                 </div>
             </div>
             <!-- Buttons for counting cars -->
-            <button class="car-btn" id="red-car-btn" data-color="red" 
-                aria-label="Button for red car">
+            <button class="car-btn" id="red-car-btn" data-color="red" aria-label="Button for red car">
                 Red Car</button>
-            <button class="car-btn" id="black-car-btn" data-color="black" 
-                aria-label="Button for black car">
+            <button class="car-btn" id="black-car-btn" data-color="black" aria-label="Button for black car">
                 Black Car</button>
-            <button class="car-btn" id="blue-car-btn" data-color="blue" 
-                aria-label="Button for blue car">
+            <button class="car-btn" id="blue-car-btn" data-color="blue" aria-label="Button for blue car">
                 Blue Car</button>
-            <button class="car-btn" id="gray-car-btn" data-color="gray" 
-                aria-label="Button for gray car">
+            <button class="car-btn" id="gray-car-btn" data-color="gray" aria-label="Button for gray car">
                 Gray Car</button>
-            <button class="car-btn" id="white-car-btn" data-color="white" 
-                aria-label="Button for white car">
+            <button class="car-btn" id="white-car-btn" data-color="white" aria-label="Button for white car">
                 White Car</button>
-            <button class="car-btn" id="other-car-btn" data-color="other" 
-                aria-label="Button for other cars">
+            <button class="car-btn" id="other-car-btn" data-color="other" aria-label="Button for other cars">
                 Other Cars</button>
         </section>
     </main>
@@ -179,6 +173,52 @@
                             aria-label="Link to developer LinkedIn profile page">
                             <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Game-Over Modal-->
+    <aside id="end-game-modal-1" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="title">Game Over</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Modal button">
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <!-- End Game statistics  -->
+                    <div id="counters">
+                        <div>Total Cars clicked: <span id="final-total">0</span></div>
+                        <div>Red Cars: <span id="final-red">0</span></div>
+                        <div>Black Cars: <span id="final-black">0</span></div>
+                        <div>Blue Cars: <span id="final-blue">0</span></div>
+                        <div>Gray Cars: <span id="final-gray">0</span></div>
+                        <div>White Cars: <span id="final-white">0</span></div>
+                        <div>Other Cars: <span id="final-other">0</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <div class="modal-footer-about d-block">
+                        <h5>Game developed by:</h5>
+                        <h6 class="font-title">Taher Mahmood</h6>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="modal-footer-content">
+                        <a href="https://github.com/TaherCCG" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer Github profile page">
+                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                        <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer LinkedIn profile page">
+                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
+                    </div>
+                    <button id="closeGame" class="modal-button mb-2" aria-label="Close this window">Close
+                        Window</button>
+                    <button id="goToIndex" class="modal-button mb-2" aria-label="Go to home page">Home</button>
                 </div>
             </div>
         </div>
