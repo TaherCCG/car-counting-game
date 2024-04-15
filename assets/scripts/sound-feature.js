@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backgroundMusic.play();
         toggleButton.textContent = 'Pause Music';
     }
-
+    // Add event listeners background to save play/pause state
     toggleButton.addEventListener('click', function () {
         if (backgroundMusic.paused) {
             backgroundMusic.play();
@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleSounds(false); // Mute all sounds when background music is paused
         }
     });
-
+    // Add event listener to volume control for background music and save volume to localStorage
     volumeControl.addEventListener('input', function () {
         backgroundMusic.volume = volumeControl.value;
         localStorage.setItem('bgMusicVolume', volumeControl.value);
     });
-
+    // Add event listener to effects volume control
     effectsVolumeControl.addEventListener('input', function () {
         sounds.effectsVolume = effectsVolumeControl.value;
     });
@@ -89,5 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-  
+
 });
+
+
+/* Bug: When user goes to a different html page, the sound effects are muted, but the background music continues to play.
+    The user needs to click pause/play music toggle button to hear the sound effects again. */
+// Working on a solution to fix this bug.
+
+
