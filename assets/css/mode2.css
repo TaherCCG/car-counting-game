@@ -47,11 +47,12 @@
     background-size: cover;
 }
 
-#game-container {
-    height: 100vh;
+/* #game-container {
+    height: 50%;
     padding: 20px;
-}
+} */
 
+#level,
 #score,
 #life-bar {
     font-size: 2rem;
@@ -62,18 +63,20 @@
 .scoreLife {
     display: inline-flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
 
 }
 
-#life-bar {
+/* #life-bar {
     position: absolute;    
     right: 15%;
-}
+} */
 
 #life-bar span {
     font-weight: bolder;
-    color: blueviolet;
+    color:limegreen;;
+    text-shadow:green 5px 0px 0px; 
+    /* font-size: 3rem;    */
 }
 
 #color-buttons {

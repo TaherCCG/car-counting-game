@@ -10,7 +10,9 @@
         content="car counting game, car game, vehicle game, educational game, kids game, cognitive abilities, mindfulness, mental health">
     <meta name="author" content="Taher Mahmood">
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <!-- Bootstrap  5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,43 +22,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
-
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Car Counting Game</title>
 </head>
 
-<body class="weather-background overlay">
-
+<body class="weather-background"> <!-- Added class to body tag for weather background. -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <ul class="navbar-nav me-auto"> <!-- Use 'me-auto' class to push items to the left -->
-                <li class="nav-item">
-                    <a class="link" href="index.html">
-                        HOME
-                        <i class="fa-solid fa-house"></i>
-                    </a>
-                </li>
-            </ul>
             <!-- Header -->
-            <header class="mx-auto text-center"> <!-- Center the header within the navbar -->
+            <header class="mx-auto text-center">
                 <h1 class="m-2 title">CAR COUNTING GAME</h1>
             </header>
-            <ul class="navbar-nav"> <!-- Keep items in a separate list -->
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#info-button">
+                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                        HOME
+                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
+                        aria-label="Open settings modal">
                         SETTINGS
-                        <i class="fa-solid fa-warehouse"></i>
+                        <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
-
+    <!-- Main Content -->
     <main>
-
+        <!-- Description -->
         <div class="container py-2 lead-info">
             <p class="lead mb-2">Enjoy a fun and educational car counting game! Test your skills by counting cars
                 based on colour, identifying different vehicle types, and recognising car brands. Perfect for children
@@ -64,91 +63,98 @@
                 enhance cognitive abilities while having fun.</p>
         </div>
 
-
-
-
-
-
         <!-- Game Modes -->
         <section class="container game-container py-2">
+            <!-- Sub heading-->
             <h2 class="text-center m2 ">Choose a Game Mode</h2>
             <div class="row justify-content-center card-container">
+                <!-- Card 1 for game mode 1-->
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card justify-content-center" id="card1">
                         <div class="card-animation">
-                            <img src="assets/images/car7.png" alt="Car" class="car-animation">
-                            <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel1">
-                            <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel2">
+                            <img src="assets/images/animation-car-no-wheels.png"
+                                alt="Car image without wheels for game mode one animation" class="car-animation">
+                            <img src="assets/images/wheel.png" alt="Wheel one for game mode one car animation"
+                                class="wheel wheel1">
+                            <img src="assets/images/wheel.png" alt="Wheel two for game mode one car animation"
+                                class="wheel wheel2">
                         </div>
+                        <!-- Car counter heading for mode one-->
                         <h3 class="card-title text-center mb-2">Car Counter Mode 1</h3>
                         <div class="card-body mode1">
                             <div class="para py-2">
-                            <p id="par1">Count cars of various colours passing by, under adult supervision. This
-                                activity fosters cognitive skills,
-                                challenging players to focus and distinguish vehicles. </p>
+                                <p id="par1">Count cars of various colours passing by, under adult supervision. This
+                                    activity fosters cognitive skills,
+                                    challenging players to focus and distinguish vehicles. </p>
                             </div>
-                                <button class="card-button py-2" id="playMode1">P L A Y</button>
+                            <button class="card-button py-2" id="playMode1"
+                                aria-label="Play button to play game mode 1">P L A Y</button>
                         </div>
                     </div>
                 </div>
+                <!-- Card 2 for game mode 2-->
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card justify-content-center" id="card2">
                         <div class="card-animation">
-                            <img src="assets/images/car7.png" alt="Car" class="car-animation">
-                            <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel1">
-                            <img src="assets/images/wheel.png" alt="Wheel" class="wheel wheel2">
+                            <img src="assets/images/animation-car-no-wheels.png"
+                                alt="Car image without wheels for game mode two animation" class="car-animation">
+                            <img src="assets/images/wheel.png" alt="Wheel one for game mode two car animation"
+                                class="wheel wheel1">
+                            <img src="assets/images/wheel.png" alt="Wheel one for game mode two car animation"
+                                class="wheel wheel2">
                         </div>
+                        <!-- Car counter heading for mode 2-->
                         <h3 class="card-title text-center mb-2">Car Counter Mode 2</h3>
                         <div class="card-body mode2">
                             <p id="par2">Count cars moving across the screen. As
                                 players advance, speed intensifies,
                                 encouraging counting, identification, and tallying based on hues. Sharpen attention and
                                 colour recognition skills while having fun.</p>
-                            <button class="card-button py-2" id="playMode2">P L A Y</button>
+                            <button class="card-button py-2" id="playMode2"
+                                aria-label="Play button to play game mode 2">P L A Y</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Developer Info Modal -->
-    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="info-button-label" aria-hidden="true">
+    <!-- Settings and Developer Info Modal -->
+    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Modal Header -->
                 <div class="modal-header container">
                     <h4 class="modal-title" id="info-button-label">Settings</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Modal button">
+                    </button>
                 </div>
                 <!-- Music Controls -->
                 <div class="modal-body container">
                     <h5>Music Controls</h5>
-                    <button id="toggleButton">Play Music</button>
+                    <button id="toggleButton" aria-label="Play background music and sound effects sounds">Play
+                        Music</button>
                     <div class="music d-flex">
                         <h6>Volume</h6>
-                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5"
+                            aria-label="Volume control for background music">
                     </div>
                     <div class="effects d-flex">
                         <h6>Effects Volume</h6>
-                        <input type="range" id="effectsVolumeControl" min="0" max="1" step="0.1" value="0.3">
+                        <input type="range" id="effectsVolumeControl" min="0" max="1" step="0.1" value="0.3"
+                            aria-label="Volume control for sound effects">
                     </div>
                     <audio id="backgroundMusic" loop>
                         <source src="assets/sounds/cyberpunk-getaway-car-karl-casey.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <!-- Weather Location manual select -->
+                <!-- Current location weather details -->
                 <div class="modal-body container">
                     <h5>Current Weather</h5>
-
                     <div class="weather-info">
                         <p id="weather-description"></p>
                     </div>
-                    <label for="locationCheckbox">Allow access to location</label>
-                    <input type="checkbox" id="locationCheckbox">
-                    <button id="getLocationButton">Get Location</button>
-
                 </div>
                 <!-- About me -->
                 <div class="modal-footer container">
@@ -156,30 +162,32 @@
                         <h5>Game developed by:</h5>
                         <h6 class="font-title">Taher Mahmood</h6>
                     </div>
+                    <!-- Social Media Links -->
                     <div class="modal-footer-content">
-                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fab fa-github fa-2x"></i></a>
-                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/TaherCCG" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer Github profile page">
+                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                        <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer LinkedIn profile page">
+                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </aside>
 
-    <!-- JavaScript -->
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap 5.3.2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <!-- JavaScript file -->
+    <!-- JavaScript files -->
     <script src="assets/scripts/weather.js"></script>
     <script src="assets/scripts/sound-feature.js"></script>
-    <script src="assets/scripts/menu.js"></script>
-
-
+    <script src="assets/scripts/main.js"></script>
 
 </body>
 

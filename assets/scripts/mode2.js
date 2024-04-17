@@ -6,10 +6,10 @@ let redCount = 0;
 let blueCount = 0;
 let blackCount = 0;
 let whiteCount = 0;
-let life = 5;
-let carSpeed = 1;
-let carCreationInterval = 1000;
-let levelReached = 0;
+let life = 5;  // Initial life counter
+let carSpeed = 1; // Initial car speed
+let carCreationInterval = 2000; // Initial car creation interval (2 seconds)
+let levelReached = 0; 
 
 // Function to create a car element and animate its movement
 function createCar(color) {
@@ -20,23 +20,26 @@ function createCar(color) {
     animateCar(car);
     // Increment total passed counter when a car is created. It will be used to calculate how many cars have left the track without being clicked.
     totalPassed++;
-    document.getElementById('totalPassed').textContent = totalPassed;
+    // document.getElementById('totalPassed').textContent = totalPassed;
+    console.log(totalPassed); // Log total passed counter to the console for debugging
 }
 
 // Function to update score counter, it will be called every time a car is clicked
 function updateScore() {
     document.getElementById('scoreValue').textContent = totalClicked;
+    console.log(totalClicked); // Log total clicked counter to the console for debugging
 }
 
 // Function to update level counter. It will be called every time the player reaches a new level and will be displayed in the game over modal
 function updateLevel() {
-    document.getElementById('levelValue').textContent = levelReached;
-    document.getElementById('level-reached').textContent = levelReached;
+    document.getElementById('levelValue').textContent = levelReached; // Update level counter
+    document.getElementById('level-reached').textContent = levelReached; // Display level reached in the game over modal
+    console.log(levelReached); // Log level reached to the console for debugging
 }
 // Function to animate car movement
 function animateCar(car) {
     const trackWidth = document.getElementById('track').offsetWidth; // Get the width of the track
-    const trackHeight = document.getElementById('track').offsetHeight; // Get the height of the track
+    const trackHeight = document.getElementById('track').offsetHeight; // Get the height of the track (not used in this mode yet, will be used in future to make the game more challenging by adding more rows of cars)
     let xPos = -100; // Initial position of the car (starting from outside the left edge)
     let yPos = Math.floor(Math.random() * 4) * 100 + 25; // Randomly select a lane (0, 1, 2 or 3) and adjust to align with the middle of the lane
 
@@ -46,13 +49,14 @@ function animateCar(car) {
             if (!car.clicked) { // Check if the car has not been clicked
                 totalNotClicked++; // Increment total not clicked counter if the car has left the track without being clicked
                 document.getElementById('totalNotClicked').textContent = totalNotClicked;
-                life--;
-                document.getElementById('lifeValue').textContent = '-'.repeat(life);
+                life--; // Decrement life counter
+                document.getElementById('lifeValue').innerHTML = ' &block;'.repeat(life);
+                console.log(life); // Log life counter to the console for debugging
 
                 if (life === 0) {
                     playSound('gameOver');
                     // Open the modal when the game is over to display the final score and level reached.
-                    const modal = document.getElementById("end-game-modal");
+                    const modal = document.getElementById("end-game-modal-2");
                     modal.style.display = "block";
 
                     // When the user clicks on "Close Game" button, close the modal.
@@ -111,7 +115,7 @@ function checkSpeedAndInterval() {
         levelReached++;
         updateLevel();
         carSpeed += 1;
-        carCreationInterval -= 100;
+        // carCreationInterval -= 10; 
         clearInterval(carCreationIntervalId);
         startGame();
     }

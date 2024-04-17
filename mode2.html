@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Description -->
     <meta name="description"
         content="Enjoy a fun and educational car counting game! Test your skills by counting cars based on colour, identifying different vehicle types, and recognising car brands. Perfect for children to enhance cognitive abilities while having fun.">
-    <meta name="game-mode-2"
-        content="car colour counting mode 2 - Count colours of cars that go pass on the screen, click on the colour button before they reach the end of track">
     <meta name="keywords"
         content="car counting game, car game, vehicle game, educational game, kids game, cognitive abilities, mindfulness, mental health">
     <meta name="author" content="Taher Mahmood">
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <!-- Bootstrap  5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -23,35 +22,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
-
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/mode2.css">
     <title>Car Counting Game</title>
 </head>
 
-<body>
+<body class="weather-background"> <!-- Added class to body tag for weather background. -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html">
-                        HOME
-                        <i class="fa-solid fa-house"></i>
-                    </a>
-                </li>
-            </ul>
             <!-- Header -->
             <header class="mx-auto text-center">
                 <h1 class="m-2 title">CAR COUNTING GAME</h1>
             </header>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#info-button">
+                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                        HOME
+                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
+                        aria-label="Open settings modal">
                         SETTINGS
-                        <i class="fa-solid fa-warehouse"></i>
+                        <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
                     </a>
                 </li>
             </ul>
@@ -59,18 +56,17 @@
     </nav>
     <!-- Main content -->
     <main>
-
+        <!-- Game Mode Description -->
         <div class="container">
             <p class="lead">Count cars of specific colours as they pass by on the screen. </p>
         </div>
 
         <!-- Game Container Section -->
-
         <section class="" id="game-container">
             <div class="scoreLife container">
                 <div id="level">Level: <span id="levelValue">0</span></div>
+                <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
                 <div id="score">Score: <span id="scoreValue">0</span></div>
-                <div id="life-bar">Life: <span id="lifeValue">-----</span></div>
             </div>
             <!-- Road where cars will move -->
             <div id="track">
@@ -90,40 +86,42 @@
 
     </main>
     <!-- Settings and Developer Info Modal -->
-    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="info-button-label" aria-hidden="true">
+    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Modal Header -->
                 <div class="modal-header container">
                     <h4 class="modal-title" id="info-button-label">Settings</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Modal button">
+                    </button>
                 </div>
                 <!-- Music Controls -->
                 <div class="modal-body container">
                     <h5>Music Controls</h5>
-                    <button id="toggleButton">Play Music</button>
+                    <button id="toggleButton" aria-label="Play background music and sound effects sounds">Play
+                        Music</button>
                     <div class="music d-flex">
                         <h6>Volume</h6>
-                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5"
+                            aria-label="Volume control for background music">
                     </div>
                     <div class="effects d-flex">
                         <h6>Effects Volume</h6>
-                        <input type="range" id="effectsVolumeControl" min="0" max="1" step="0.1" value="0.3">
+                        <input type="range" id="effectsVolumeControl" min="0" max="1" step="0.1" value="0.3"
+                            aria-label="Volume control for sound effects">
                     </div>
                     <audio id="backgroundMusic" loop>
                         <source src="assets/sounds/cyberpunk-getaway-car-karl-casey.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <!-- Current Weather forecast -->
+                <!-- Current location weather details -->
                 <div class="modal-body container">
                     <h5>Current Weather</h5>
-
                     <div class="weather-info">
                         <p id="weather-description"></p>
                     </div>
-                    <!-- <label for="locationCheckbox">Allow access to location</label>
-                    <input type="checkbox" id="locationCheckbox">
-                    <button id="getLocationButton">Get Location</button> -->
                 </div>
                 <!-- About me -->
                 <div class="modal-footer container">
@@ -131,11 +129,16 @@
                         <h5>Game developed by:</h5>
                         <h6 class="font-title">Taher Mahmood</h6>
                     </div>
+                    <!-- Social Media Links -->
                     <div class="modal-footer-content">
-                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fab fa-github fa-2x"></i></a>
-                        <a href="#" target="_blank" class="btn btn-outline-primary rounded-circle"><i
-                                class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/TaherCCG" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer Github profile page">
+                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                        <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer LinkedIn profile page">
+                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -143,14 +146,15 @@
     </aside>
 
     <!-- Game-Over Modal-->
-    <aside id="end-game-modal" class="modal">
+    <aside id="end-game-modal-2" class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
-
+                <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="title">Game Over</h4>
+                    <h4 class="title">Game Over</h4>                   
                 </div>
                 <div class="modal-body container">
+                    <!-- End Game statistics  -->
                     <div id="counters">
                         <div class="d-none">Total Cars Passed: <span id="totalPassed">0</span></div>
                         <div>Your Score: <span id="totalClicked">0</span></div>
@@ -164,9 +168,24 @@
                     </div>
                 </div>
                 <div class="modal-footer d-flex">
-                    <button id="closeGame" class="modal-button mb-2">Close Window</button>
-                    <button id="goToIndex" class="modal-button mb-2">Home</button>
-                    <!-- <span id="close" class="card-button">CLOSE</span>                    -->
+                    <div class="modal-footer-about d-block">
+                        <h5>Game developed by:</h5>
+                        <h6 class="font-title">Taher Mahmood</h6>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="modal-footer-content">
+                        <a href="https://github.com/TaherCCG" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer Github profile page">
+                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                        <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
+                            class="btn btn-outline-primary rounded-circle"
+                            aria-label="Link to developer LinkedIn profile page">
+                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
+                    </div>
+                    <button id="closeGame" class="modal-button mb-2" aria-label="Close this window">Close
+                        Window</button>
+                    <button id="goToIndex" class="modal-button mb-2" aria-label="Go to home page">Home</button>
                 </div>
             </div>
         </div>

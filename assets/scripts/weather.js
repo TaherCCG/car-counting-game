@@ -42,7 +42,7 @@ async function getWeather(latitude, longitude) {
     console.log(data);  // Log the weather data to the console
 
     // Get the weather description - reference: https://openweathermap.org/weather-conditions  see also README.md
-    const weatherDescription = data.weather[0].description;
+    const weatherDescription = data.weather[0].main;
 
     // Update the weather description on the webpage
     document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
@@ -60,11 +60,17 @@ function changeBackground(weatherDescription) {
 
   // Map weather descriptions to background images
   const backgrounds = {
-    'clear sky': 'url("assets/images/background/clear.png")',
-    'few clouds': 'url("assets/images/background/few-clouds.png")',
-    'scattered clouds': 'url("assets/images/background/scattered-clouds.png")',
-    'broken clouds': 'url("assets/images/background/broken-clouds.png")',
-    'shower rain': 'url("assets/images/background/shower.png")',
+    'clear': 'url("assets/images/background/clear.png")',
+    'smoke': 'url("assets/images/background/smoke.png")',
+    'ash': 'url("assets/images/background/ash.png")',
+    'squall': 'url("assets/images/background/squall.png")',
+    'tornado': 'url("assets/images/background/tornado.png")',
+    'fog': 'url("assets/images/background/fog.png")',
+    'sand': 'url("assets/images/background/sand.png")',
+    'dust': 'url("assets/images/background/dust.png")',
+    'haze': 'url("assets/images/background/haze.png")',
+    'clouds': 'url("assets/images/background/clouds.png")',
+    'drizzle': 'url("assets/images/background/drizzle.png")',
     'rain': 'url("assets/images/background/rain.png")',
     'thunderstorm': 'url("assets/images/background/thunderstorm.png")',
     'snow': 'url("assets/images/background/snow.png")',

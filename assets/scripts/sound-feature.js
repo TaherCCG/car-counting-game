@@ -33,6 +33,20 @@ const backgroundMusicSrc = 'assets/sounds/cyberpunk-getaway-car-karl-casey.mp3';
 let backgroundMusic = new Audio(backgroundMusicSrc);
 backgroundMusic.muted = true; // Start with background music muted
 
+// Toggle function for sound1 and sound2
+function toggleSounds(isPlaying) {
+    for (const key in sounds) {
+        if (Object.hasOwnProperty.call(sounds, key)) {
+            const sound = sounds[key];
+            if (isPlaying) {
+                sound.muted = false;
+            } else {
+                sound.muted = true;
+            }
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById('toggleButton');
     const volumeControl = document.getElementById('volumeControl');
@@ -52,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backgroundMusic.play();
         toggleButton.textContent = 'Pause Music';
     }
-
+    // Add event listeners background to save play/pause state
     toggleButton.addEventListener('click', function () {
         if (backgroundMusic.paused) {
             backgroundMusic.play();
@@ -66,28 +80,20 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleSounds(false); // Mute all sounds when background music is paused
         }
     });
-
+    // Add event listener to volume control for background music and save volume to localStorage
     volumeControl.addEventListener('input', function () {
         backgroundMusic.volume = volumeControl.value;
         localStorage.setItem('bgMusicVolume', volumeControl.value);
     });
-
+    // Add event listener to effects volume control
     effectsVolumeControl.addEventListener('input', function () {
         sounds.effectsVolume = effectsVolumeControl.value;
     });
-
-    // Toggle function for sound1 and sound2
-    function toggleSounds(isPlaying) {
-        for (const key in sounds) {
-            if (Object.hasOwnProperty.call(sounds, key)) {
-                const sound = sounds[key];
-                if (isPlaying) {
-                    sound.muted = false;
-                } else {
-                    sound.muted = true;
-                }
-            }
-        }
-    }
-  
 });
+
+
+/* Bug: When user goes to a different html page, the sound effects are muted, but the background music continues to play.
+    The user needs to click pause/play music toggle button to hear the sound effects again. */
+// Working on a solution to fix this bug.
+
+
