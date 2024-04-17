@@ -19,24 +19,18 @@ body {
 }
 
 .weather-background {
-    background-image: url('../images/background/modal-bg.png');
+    background-image: url('../images/background/modal4.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700
-*/
-
-/* note: 21/3  add more font classes  */
 .title {
     font-family: "championship", monospace;
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(243, 113, 7);
-    text-shadow: #050505 4px 4px 20px;    
+    text-shadow: #050505 4px 4px 20px;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -67,24 +61,11 @@ body {
         color: purple;
         text-shadow: #050505 4px 4px 20px;
     }
-   
+
 }
 
-/* .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    margin: auto;
-    margin-top: 20px;
-    padding: 20px;
-      
-    background-color: rgba(34, 3, 37, 0.5); 
-} */
-
 .container {
-    margin-top:15px;
+    margin-top: 15px;
     background: rgba(26, 1, 36, 0.5);
     border-radius: 15px;
     text-shadow: #050505 2px 2px 10px;
@@ -112,6 +93,7 @@ body {
     background: rgba(56, 1, 73, 0.781);
     transition: box-shadow 0.5s;
 }
+
 .card-title {
     font-family: "championship", monospace;
     font-size: 2rem;
@@ -121,8 +103,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 5px;
-    /* background: rgba(56, 1, 73, 0.781); */
 }
+
 .btn {
     background-color: #8d06db;
     width: 90%;
@@ -131,23 +113,23 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     margin: 10px 0;
-   
+
 }
 
 
 .card-body.mode2,
 .card-body.mode1 {
-    display: none; 
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2; 
-    background-color: rgba(255, 255, 255, 0.7); 
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
     color: rgb(0, 0, 0);
     text-shadow: #a703f39a 2px 2px 10px;
-    padding: 20px; 
+    padding: 20px;
     font-size: 0.7em;
     font-weight: bold;
     border-radius: 20px;
@@ -177,12 +159,12 @@ body {
         background-color: #7506b6;
         transition: 5s;
         letter-spacing: 1em;
-    }  
+    }
 }
 
 .modal-button {
     background-color: #330250;
-    width:100%;
+    width: 100%;
     padding: 10px;
     margin: auto 0;
     cursor: pointer;
@@ -198,8 +180,9 @@ body {
         background-color: #9805ee;
         transition: 5s;
         letter-spacing: 0.5em;
-    }  
+    }
 }
+
 .card:hover {
     box-shadow: 0 0 100px rgba(56, 1, 73, 0.781);
 }
@@ -215,17 +198,6 @@ body {
     z-index: 0;
 }
 
-/* .card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
-    z-index: -1;
-    border-radius: 15px;
-} */
 .card:hover .wheel {
     animation: spin 1s linear infinite;
 }
@@ -290,7 +262,7 @@ body {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(20px);
-  
+
 }
 
 .modal-content {
@@ -299,12 +271,12 @@ body {
     padding: 10px;
     width: 100%;
     max-width: 600px;
-    background: url('../images/background/modal-bg.png') no-repeat center center/cover;
+    background: url('../images/background/modal.png') no-repeat center center/cover;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(109, 2, 180, 0.5);
     color: rgb(250, 247, 247);
     text-shadow: #8d06db 4px 4px 4px;
-    
+
 }
 
 .font-title {
@@ -353,31 +325,14 @@ body {
 }
 
 /*  Responsive Design for Car Animation - Tablet*/
-@media (max-width: 768px) {
-.title {
-    font-size: 3rem;
-}
-.link {
-    font-size: 1.5rem;
-}
-
-.lead-info {
-    display: none;
-}
-
-.game-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-}
+@media (min-width: 768px) {
 
     /* Car animation */
     .wheel {
         width: 100px;
         height: 100px;
-   }
-   
+    }
+
     .wheel1 {
         position: absolute;
         top: 55%;
@@ -394,12 +349,94 @@ body {
         width: 85%;
         height: 100%;
     }
-} 
+}
 
+
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+    .game-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #level,
+    #score,
+    #life-bar {
+        font-size: 1rem;
+        margin-top: 0;
+
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .link {
+        font-size: 0.8rem;
+    }
+
+    .lead-info {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #level,
+    #score,
+    #life-bar {
+        font-size: 2rem;
+        margin-top: 0;
+
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .link {
+        font-size: 1.5rem;
+    }
+
+    .lead-info {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .link {
+        font-size: 2rem;
+    }
+
+
+    .wheel {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wheel1 {
+        position: absolute;
+        top: 50%;
+        left: 19%;
+    }
+
+    .wheel2 {
+        position: absolute;
+        top: 50%;
+        left: 61%;
+    }
+}
 
 @media (min-width: 1199px) {
 
-  
+
     .wheel {
         width: 100px;
         height: 100px;

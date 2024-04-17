@@ -66,9 +66,6 @@
 .other {
     background-image: url('../images/cars/green_car.png');
 }
-.emergency {
-    background-image: url('../images/cars/yellow_car.png');
-}
 
 /* Placed counter behind the car */
 .counter {
@@ -127,12 +124,6 @@
     &#other-car-btn {
         background-color: #bcafc4;
         color: black;
-    }
-
-    &#emergency-car-btn {
-        background-color: #ff0000;
-        color: aliceblue;
-        width: 150px;
     }
 
     &:hover {

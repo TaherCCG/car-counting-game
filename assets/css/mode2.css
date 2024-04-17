@@ -24,7 +24,6 @@
     top: 50%; 
     transform: translateY(-50%);
     border-radius: 10px; 
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  for testing if image is not displayed */
 }
 
 .red {
@@ -67,11 +66,6 @@
 
 }
 
-/* #life-bar {
-    position: absolute;    
-    right: 15%;
-} */
-
 #life-bar span {
     font-weight: bolder;
     color:limegreen;;
@@ -89,13 +83,43 @@
 .color-button {
     padding: 10px 20px;
     font-size: 16px;
-}
 
-#start-buttons {
-    margin-top: auto; 
+    &#red-car-btn {
+        background-color: #ff0000;
+        color: aliceblue;
+    }
+
+    &#black-car-btn {
+        background-color: #000000;
+        color: aliceblue;
+    }
+
+    &#blue-car-btn {
+        background-color: #0000ff;
+        color: aliceblue;
+    }
+
+    &#white-car-btn {
+        background-color: #ffffff;
+        color: black;
+    }
+
+    &#other-car-btn {
+        background-color: #bcafc4;
+        color: black;
+    }
+
+    &:hover {
+        background-color: #8d06db;
+        color : aliceblue;
+    }
 }
 
 #start-button {
+    width: 20%;
+    margin: 0 auto;
+    background: #8d06db;
+    color: aliceblue;
     font-size: 16px;
 }
 
