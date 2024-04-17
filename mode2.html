@@ -58,11 +58,11 @@
     <main>
         <!-- Game Mode Description -->
         <div class="container">
-            <p class="lead">Count cars of specific colours as they pass by on the screen. </p>
+            <p class="lead-info">Count cars of specific colours as they pass by on the screen. </p>
         </div>
 
         <!-- Game Container Section -->
-        <section class="" id="game-container">
+        <section id="game-container">
             <div class="scoreLife container">
                 <div id="level">Level: <span id="levelValue">0</span></div>
                 <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
@@ -73,10 +73,10 @@
                 <div id="road"></div>
             </div>
             <div id="color-buttons">
-                <button class="color-button" data-color="red">Red</button>
-                <button class="color-button" data-color="blue">Blue</button>
-                <button class="color-button" data-color="black">Black</button>
-                <button class="color-button" data-color="white">White</button>
+                <button class="color-button" data-color="red" id="red-car-btn" >Red</button>
+                <button class="color-button" data-color="blue" id="blue-car-btn" >Blue</button>
+                <button class="color-button" data-color="black" id="black-car-btn" >Black</button>
+                <button class="color-button" data-color="white" id="white-car-btn">White</button>
             </div>
 
             <button id="start-button" class="short-button">Start</button>
