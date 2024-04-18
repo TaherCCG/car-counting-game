@@ -8,7 +8,7 @@ let blackCount = 0;
 let whiteCount = 0;
 let life = 5;  // Initial life counter
 let carSpeed = 1; // Initial car speed
-let carCreationInterval = 2000; // Initial car creation interval (2 seconds)
+let carCreationInterval = 1500; // Initial car creation interval (1.5 seconds)
 let levelReached = 0; 
 
 // Function to create a car element and animate its movement
@@ -114,7 +114,7 @@ function checkSpeedAndInterval() {
         playSound('nextLevel');
         levelReached++;
         updateLevel();
-        carSpeed += 1;
+        carSpeed += 2;
         // carCreationInterval -= 10; 
         clearInterval(carCreationIntervalId);
         startGame();
