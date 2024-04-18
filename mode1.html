@@ -35,17 +35,19 @@
         <div class="container-fluid">
             <!-- Header -->
             <header class="mx-auto text-center">
-                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
             </header>
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <!-- <a class="link" href="index.html" aria-label="Go to landing page index.html">
                         HOME
                         <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
                     </a> -->
                     <button onclick="toggleTutorial()" class="link">Tutorial</button>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
                         aria-label="Open settings modal">
                         SETTINGS
@@ -131,8 +133,10 @@
                     ensuring safety and guidance. <em>Please stand at a safe place away from the road</em></p>
                 <p>2. Click on the buttons to count the cars based on their colour.
                     Once you reach 100 Cars the game ends</p>
-                <button onclick="nextStep()">Next</button>
-                <button onclick="closeTutorial()">Close</button>
+                <div class="d-flex">
+                    <button onclick="nextStep()" class="btn">Next</button>
+                    <button onclick="closeTutorial()" class="btn">Close</button>
+                </div>
             </div>
 
             <div class="step">
@@ -145,9 +149,11 @@
                 <div class="mb-2">
                     <img src="assets/images/tutorial/settings-info.png" alt="image of setting modal">
                 </div>
-                <button onclick="prevStep()">Previous</button>
-                <button onclick="nextStep()">Next</button>
-                <button onclick="closeTutorial()">Close</button>
+                <div class="d-flex">
+                    <button onclick="prevStep()" class="btn">Previous</button>
+                    <button onclick="nextStep()" class="btn">Next</button>
+                    <button onclick="closeTutorial()" class="btn">Close</button>
+                </div>
             </div>
 
             <div class="step">
@@ -156,9 +162,9 @@
                 <div class="mb-2">
                     <img src="assets/images/tutorial/mode1-step1.png" alt="image of game buttons with instructions">
                 </div>
-                <button onclick="prevStep()">Previous</button>
-                <button onclick="nextStep()">Next</button>
-                <button onclick="closeTutorial()">Close</button>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
             </div>
 
             <div class="step">
@@ -167,9 +173,9 @@
                 <div class="mb-2">
                     <img src="assets/images/tutorial/mode1-step2.png" alt="image of total count">
                 </div>
-                <button onclick="prevStep()">Previous</button>
-                <button onclick="nextStep()">Next</button>
-                <button onclick="closeTutorial()">Close</button>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
             </div>
 
             <div class="step">
@@ -179,16 +185,16 @@
                 <div class="mb-2">
                     <img src="assets/images/tutorial/mode1-step3.png" alt="image of end game modal">
                 </div>
-                <button onclick="prevStep()">Previous</button>
-                <button onclick="nextStep()">Next</button>
-                <button onclick="closeTutorial()">Close</button>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
             </div>
 
             <div class="step">
                 <h2>Thank You!</h2>
                 <p><strong>Please remember this game mode requires adult supervision.</strong></p>
-                <button onclick="prevStep()">Previous</button>
-                <button onclick="closeTutorial()">Close</button>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
             </div>
         </div>
 
