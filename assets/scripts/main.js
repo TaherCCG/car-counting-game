@@ -1,54 +1,55 @@
-document.addEventListener('DOMContentLoaded', function () {
 
-    // Function to set up event listeners
-    function setupEventListeners() {
-        const card1 = document.getElementById('card1');
-        const card2 = document.getElementById('card2');
-        const playMode1 = document.getElementById('playMode1');
-        const playMode2 = document.getElementById('playMode2');
 
-        if (card1 && card2 && playMode1 && playMode2) {
-            // Hover effect for card1 and card2
-            card1.addEventListener('mouseenter', function () {
-                this.querySelector('.mode1').style.display = 'block';
-                playSound("sound1");
-            });
+// Function to set up event listeners
+function setupEventListeners() {
+    const card1 = document.getElementById('card1');
+    const card2 = document.getElementById('card2');
+    const playMode1 = document.getElementById('playMode1');
+    const playMode2 = document.getElementById('playMode2');
 
-            card1.addEventListener('mouseleave', function () {
-                this.querySelector('.mode1').style.display = 'none';
-            });
+    if (card1 && card2 && playMode1 && playMode2) {
+        // Hover effect for card1 and card2
+        card1.addEventListener('mouseenter', function () {
+            this.querySelector('.mode1').style.display = 'block';
+            playSound("sound1");
+        });
 
-            card2.addEventListener('mouseenter', function () {
-                this.querySelector('.mode2').style.display = 'block';
-                playSound("sound1");
-            });
+        card1.addEventListener('mouseleave', function () {
+            this.querySelector('.mode1').style.display = 'none';
+        });
 
-            card2.addEventListener('mouseleave', function () {
-                this.querySelector('.mode2').style.display = 'none';
-            });
+        card2.addEventListener('mouseenter', function () {
+            this.querySelector('.mode2').style.display = 'block';
+            playSound("sound1");
+        });
 
-            // Event listener for playMode1 and playMode2 buttons
-            playMode1.addEventListener('click', function () {
-                playSound("sound2");
-                setTimeout(() => {
-                    window.location.href = "mode1.html";
-                }, 1000);
-            });
+        card2.addEventListener('mouseleave', function () {
+            this.querySelector('.mode2').style.display = 'none';
+        });
 
-            playMode2.addEventListener('click', function () {
-                playSound("sound2");
-                setTimeout(() => {
-                    window.location.href = "mode2.html";
-                }, 1000);
-            });
-        }
+        // Event listener for playMode1 and playMode2 buttons
+        playMode1.addEventListener('click', function () {
+            playSound("sound2");
+            setTimeout(() => {
+                window.location.href = "mode1.html";
+            }, 1000);
+        });
+
+        playMode2.addEventListener('click', function () {
+            playSound("sound2");
+            setTimeout(() => {
+                window.location.href = "mode2.html";
+            }, 1000);
+        });
     }
+}
+document.addEventListener('DOMContentLoaded', function () {
     // Call setupEventListeners when DOM is ready
     setupEventListeners();
 });
 
 // Export the functions
-module.exports = { playSound, setupEventListeners };
+module.exports = { setupEventListeners };
 
 /*  
 ---------------------------------------------------------------------------------
