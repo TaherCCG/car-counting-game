@@ -35,16 +35,19 @@
         <div class="container-fluid">
             <!-- Header -->
             <header class="mx-auto text-center">
-                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
             </header>
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                <li class="nav-item px-2">
+                    <!-- <a class="link" href="index.html" aria-label="Go to landing page index.html">
                         HOME
                         <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
-                    </a>
+                    </a> -->
+                    <button onclick="toggleTutorial()" class="link">Tutorial</button>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
                         aria-label="Open settings modal">
                         SETTINGS
@@ -53,6 +56,7 @@
                 </li>
             </ul>
         </div>
+
     </nav>
     <!-- Main content -->
     <main>
@@ -117,7 +121,87 @@
             <button class="car-btn" id="other-car-btn" data-color="other" aria-label="Button for other cars">
                 Other Cars</button>
         </section>
+
+        <div class="blur-overlay"></div>
+        <!-- Tutorial -->
+        <div class="tutorial-container container">
+            <div class="step active">
+                <h2>Welcome to Car Counting Game Mode 1</h2>
+                <p>Follow the steps to learn how to play the game.</p>
+                <h3>Rules</h3>
+                <p>1. Count cars of specific colours as they pass by on the road, with adult supervision
+                    ensuring safety and guidance. <em>Please stand at a safe place away from the road</em></p>
+                <p>2. Click on the buttons to count the cars based on their colour.
+                    Once you reach 100 Cars the game ends</p>
+                <div class="d-flex">
+                    <button onclick="nextStep()" class="btn">Next</button>
+                    <button onclick="closeTutorial()" class="btn">Close</button>
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Settings</h2>
+                <p>In the settings menu, you can toggle music on or of, change volume of background or effects volume.
+                <p>The settings will be saved in your browser across different modes.</p>
+                <p>Current Weather is the weather at your current location if you have allowed permission for
+                    geolocation.</p>
+                <p>Developer info and social media links are also available in the settings menu.</p>
+                <div class="mb-2">
+                    <img src="assets/images/tutorial/settings-info.png" alt="image of setting modal">
+                </div>
+                <div class="d-flex">
+                    <button onclick="prevStep()" class="btn">Previous</button>
+                    <button onclick="nextStep()" class="btn">Next</button>
+                    <button onclick="closeTutorial()" class="btn">Close</button>
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Step 1:</h2>
+                <p>Click on the buttons when you see a car.</p>
+                <div class="mb-2">
+                    <img src="assets/images/tutorial/mode1-step1.png" alt="image of game buttons with instructions">
+                </div>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
+            </div>
+
+            <div class="step">
+                <h2>Step 2:</h2>
+                <p>When total count reaches 100 the game ends.</p>
+                <div class="mb-2">
+                    <img src="assets/images/tutorial/mode1-step2.png" alt="image of total count">
+                </div>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
+            </div>
+
+            <div class="step">
+                <h2>Step 3:</h2>
+                <p>When the game ends, it shows you how many diiferent cars you clicked from the total 100 car.</p>
+                <p>Click on the close button to close the game or go to home page.</p>
+                <div class="mb-2">
+                    <img src="assets/images/tutorial/mode1-step3.png" alt="image of end game modal">
+                </div>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
+            </div>
+
+            <div class="step">
+                <h2>Thank You!</h2>
+                <p><strong>Please remember this game mode requires adult supervision.</strong></p>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
+            </div>
+        </div>
+
     </main>
+
+
+
     <!-- Settings and Developer Info Modal -->
     <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info"
         aria-hidden="true">
@@ -233,6 +317,7 @@
     <!-- JavaScript files -->
     <script src="assets/scripts/weather.js"></script>
     <script src="assets/scripts/sound-feature.js"></script>
+    <script src="assets/scripts/tutorial-feature.js"></script>
     <script src="assets/scripts/mode1.js"></script>
 </body>
 
