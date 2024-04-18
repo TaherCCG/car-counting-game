@@ -54,7 +54,10 @@ body {
     text-shadow: #050505 4px 4px 20px;
     size: 24px;
     text-decoration: none;
+    text-transform: uppercase;
     cursor: pointer;
+    background: transparent;
+    border: none;
     transition: color 0.5s;
 
     &:hover {
@@ -162,27 +165,6 @@ body {
     }
 }
 
-.modal-button {
-    background-color: #330250;
-    width: 100%;
-    padding: 10px;
-    margin: auto 0;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    font-family: "championship", monospace;
-    font-size: 1.5rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #7506b6 4px 4px 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover {
-        background-color: #9805ee;
-        transition: 5s;
-        letter-spacing: 0.5em;
-    }
-}
-
 .card:hover {
     box-shadow: 0 0 100px rgba(56, 1, 73, 0.781);
 }
@@ -252,7 +234,53 @@ body {
     }
 }
 
+/* Tutorial styling */
 
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+    z-index: 999; /* Ensure the overlay stays on top */
+    display: none; /* Initially hidden */
+  }
+
+  .tutorial-container {
+    text-align: center;
+    position: absolute; /* Ensure relative positioning for child elements */
+    top:10%;
+    left: 15%;
+    z-index: 1000; /* Ensure the container stays on top of the overlay */
+    display: none; /* Initially hidden */
+  }
+
+  .step {
+    display: none;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #330250;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .step.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -277,6 +305,28 @@ body {
     color: rgb(250, 247, 247);
     text-shadow: #8d06db 4px 4px 4px;
 
+}
+
+
+.modal-button {
+    background-color: #330250;
+    width: 100%;
+    padding: 10px;
+    margin: auto 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-family: "championship", monospace;
+    font-size: 1.5rem;
+    color: rgb(243, 113, 7);
+    text-shadow: #7506b6 4px 4px 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #9805ee;
+        transition: 5s;
+        letter-spacing: 0.5em;
+    }
 }
 
 .font-title {
