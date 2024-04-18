@@ -49,7 +49,6 @@ body {
 .link {
     font-family: "championship", monospace;
     font-size: 2rem;
-    margin: 0 10px;
     color: rgb(243, 113, 7);
     text-shadow: #050505 4px 4px 20px;
     size: 24px;
@@ -110,13 +109,16 @@ body {
 
 .btn {
     background-color: #8d06db;
-    width: 90%;
     color: aliceblue;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 10px 10px;
+}
 
+.btn:hover {
+    background-color: #7506b6;
+    transition: 0.5s;
 }
 
 
@@ -259,11 +261,11 @@ body {
   .step {
     display: none;
     padding: 20px;
-    border: 2px solid #3498db;
+    border: 3px solid  rgb(243, 113, 7);
     border-radius: 8px;
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #330250;
+    color: aliceblue;
     animation: fadeIn 1s ease-in-out;
   }
 
