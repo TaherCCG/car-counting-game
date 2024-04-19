@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("final-other").textContent = clickCounts.other;
         document.getElementById("final-total").textContent = totalClicks;
         // When the user clicks on "Close Game" button, close the modal.
-        const closeGameButton = document.getElementById("closeGame");
+        const closeGameButton = document.getElementsByClassName('close-game')[0, 1];
         closeGameButton.addEventListener("click", function () {
             // Close the modal
             modal.style.display = "none";

@@ -31,33 +31,65 @@
 <body class="weather-background"> <!-- Added class to body tag for weather background. -->
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <!-- Header -->
-            <header class="mx-auto text-center">
+    <!-- <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid"> -->
+    <!-- Header -->
+    <!-- <header class="mx-auto text-center">
                 <a class="link" href="index.html" aria-label="Go to landing page index.html">
                     <h1 class="m-2 title">CAR COUNTING GAME</h1>
                 </a>
             </header>
             <ul class="navbar-nav me-auto">
-                <li class="nav-item px-2">
-                    <!-- <a class="link" href="index.html" aria-label="Go to landing page index.html">
-                        HOME
-                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
-                    </a> -->
-                    <button onclick="toggleTutorial()" class="link">Tutorial</button>
+                <li class="nav-item px-5">
+                    <a onclick="toggleTutorial()" class="link"><span>Tutorial</span>
+                        <i class="fa-solid fa-school"></i>
+                    </a>
                 </li>
-                <li class="nav-item px-2">
+                <li class="nav-item px-5">
                     <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
                         aria-label="Open settings modal">
-                        SETTINGS
+                        <span>Settings</span>
                         <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> 
+    </nav>-->
 
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Header -->
+            <header class="mx-auto text-center d-flex">
+                <a class="navbar-brand link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
+            </header>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item px-5">
+                        <a onclick="toggleTutorial()" class="nav-link link"><span>Tutorial</span>
+                            <i class="fa-solid fa-school"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#info-button"
+                            aria-label="Open settings modal">
+                            <span>Settings</span>
+                            <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+
+
     <!-- Main content -->
     <main>
         <!-- Description -->
@@ -137,6 +169,7 @@
                     ensuring safety and guidance. <em>Please stand at a safe place away from the road</em></p>
                 <p>2. Click on the buttons to count the cars based on their colour.
                     Once you reach 100 Cars the game ends</p>
+                <p>3. The game will show you how many cars you clicked from the total 100 cars.</p>
                 <div class="d-flex">
                     <button onclick="nextStep()" class="btn">Next</button>
                     <button onclick="closeTutorial()" class="btn">Close</button>
@@ -162,6 +195,16 @@
 
             <div class="step">
                 <h2>Step 1:</h2>
+                <p>Double click on the Start button to start.</p>
+                <div class="mb-2">
+                    <img src="assets/images/tutorial/mode1-step1.png" alt="image of game buttons with instructions">
+                </div>
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn">Close</button>
+            </div>
+            <div class="step">
+                <h2>Step 2:</h2>
                 <p>Click on the buttons when you see a car.</p>
                 <div class="mb-2">
                     <img src="assets/images/tutorial/mode1-step1.png" alt="image of game buttons with instructions">
@@ -172,7 +215,7 @@
             </div>
 
             <div class="step">
-                <h2>Step 2:</h2>
+                <h2>Step 3:</h2>
                 <p>When total count reaches 100 the game ends.</p>
                 <div class="mb-2">
                     <img src="assets/images/tutorial/mode1-step2.png" alt="image of total count">
@@ -183,7 +226,7 @@
             </div>
 
             <div class="step">
-                <h2>Step 3:</h2>
+                <h2>Step 4:</h2>
                 <p>When the game ends, it shows you how many diiferent cars you clicked from the total 100 car.</p>
                 <p>Click on the close button to close the game or go to home page.</p>
                 <div class="mb-2">
@@ -273,7 +316,7 @@
 
                 <div class="modal-header">
                     <h4 class="title">Game Over</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Modal button">
+                    <button type="button" class="btn-close close-game" data-bs-dismiss="modal" aria-label="Close Modal button">
                     </button>
                 </div>
                 <div class="modal-body container">
@@ -304,7 +347,7 @@
                             aria-label="Link to developer LinkedIn profile page">
                             <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
                     </div>
-                    <button id="closeGame" class="modal-button mb-2" aria-label="Close this window">Close
+                    <button id="closeGame" class="modal-button mb-2 close-game" aria-label="Close this window">Close
                         Window</button>
                     <button id="goToIndex" class="modal-button mb-2" aria-label="Go to home page">Home</button>
                 </div>
@@ -320,8 +363,8 @@
         </script>
     <!-- JavaScript files -->
     <script src="assets/scripts/weather.js"></script>
-    <script src="assets/scripts/sound-feature.js"></script>
     <script src="assets/scripts/tutorial-feature.js"></script>
+    <script src="assets/scripts/sound-feature.js"></script>
     <script src="assets/scripts/mode1.js"></script>
 </body>
 
