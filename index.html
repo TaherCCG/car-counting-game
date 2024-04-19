@@ -30,23 +30,20 @@
 <body class="weather-background"> <!-- Added class to body tag for weather background. -->
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <!-- Header -->
             <header class="mx-auto text-center">
-                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                <a class="link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
             </header>
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
-                        HOME
-                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
+                <!-- Navigation Links -->
+                <li class="nav-item px-5">
                     <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
                         aria-label="Open settings modal">
-                        SETTINGS
+                        Settings
                         <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
                     </a>
                 </li>
@@ -120,7 +117,8 @@
     </main>
 
     <!-- Settings and Developer Info Modal -->
-    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info" aria-hidden="true">
+    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <!-- Modal Header -->
@@ -175,6 +173,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </aside>
+    <!-- Small Screen Message -->
+    <aside id="small-screen">
+        <div class="container">
+            <h3 class="text-center title">Car Counting Game</h3>
+            <h3 class="text-center"><strong>Sorry!</strong></h3>
+            <h4 class="text-center">
+                "Kindly note that the game is not compatible with mobile or smaller screens. For an optimal experience,
+                we suggest playing on a tablet or larger screen."</h4>
+            <h4 class="text-center">Minimum size required to play is 426px </h4>
+            <h5 class="text-center"><em>Thank you!</em></h5>
         </div>
     </aside>
 
