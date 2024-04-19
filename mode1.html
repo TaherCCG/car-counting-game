@@ -93,7 +93,7 @@
     <!-- Main content -->
     <main>
         <!-- Description -->
-        <div class="container">
+        <div id="mode1-info" class="container">
             <p class="lead-info">Count cars of specific colours as they pass by on the road, with adult supervision
                 ensuring safety and guidance. </p>
         </div>
@@ -141,7 +141,7 @@
             </div>
             <div><button id="start-btn" onclick="toggleGame()">Start Game <br><span>(double click)</span></button></div>
             <!-- Buttons for counting cars -->
-            <div id="car-buttons-container">
+            <div id="car-buttons-container" class="mb-2">
                 <button class="car-btn" id="red-car-btn" data-color="red" aria-label="Button for red car">
                     Red Car</button>
                 <button class="car-btn" id="black-car-btn" data-color="black" aria-label="Button for black car">
@@ -316,7 +316,7 @@
 
                 <div class="modal-header">
                     <h4 class="title">Game Over</h4>
-                    <button type="button" class="btn-close close-game" data-bs-dismiss="modal" aria-label="Close Modal button">
+                    <button id="close-game-x" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Modal button">
                     </button>
                 </div>
                 <div class="modal-body container">
@@ -347,7 +347,7 @@
                             aria-label="Link to developer LinkedIn profile page">
                             <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
                     </div>
-                    <button id="closeGame" class="modal-button mb-2 close-game" aria-label="Close this window">Close
+                    <button id="close-game-btn" class="modal-button mb-2" aria-label="Close this window">Close
                         Window</button>
                     <button id="goToIndex" class="modal-button mb-2" aria-label="Go to home page">Home</button>
                 </div>

@@ -2,15 +2,18 @@
 /* playSound function is used from sound-features.js */
 
 function toggleGame() {
-    var carButtonsContainer = document.getElementById("car-buttons-container");
-    var startButton = document.getElementById("start-btn");
+    let carButtonsContainer = document.getElementById("car-buttons-container");
+    let leadInfo = document.getElementById("mode1-info");
+    let startButton = document.getElementById("start-btn");
 
     // Toggle visibility of car buttons container
     if (carButtonsContainer.style.display === "none") {
         carButtonsContainer.style.display = "block";
+        leadInfo.style.display = "none";
         startButton.style.display = "none"; // Hide the start button
     } else {
         carButtonsContainer.style.display = "none";
+        leadInfo.style.display = "block";
         startButton.style.display = "block"; // Show the start button
     }
 }
@@ -128,14 +131,22 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("final-white").textContent = clickCounts.white;
         document.getElementById("final-other").textContent = clickCounts.other;
         document.getElementById("final-total").textContent = totalClicks;
-        // When the user clicks on "Close Game" button, close the modal.
-        const closeGameButton = document.getElementsByClassName('close-game')[0, 1];
+        // When the user clicks on "X" button, close the modal.
+        const closeGameButton = document.getElementById('close-game-x');
         closeGameButton.addEventListener("click", function () {
             // Close the modal
             modal.style.display = "none";
             toggleGame(); // Hide the car buttons
             location.reload();
         });
+         // When the user clicks on "Close Game" button, close the modal.
+         const closeGameButton1 = document.getElementById('close-game-btn');
+         closeGameButton1.addEventListener("click", function () {
+             // Close the modal
+             modal.style.display = "none";
+             toggleGame(); // Hide the car buttons
+             location.reload();
+         });
         // When the user clicks on "Home" button, go to index.html
         const goToIndexButton = document.getElementById("goToIndex");
         goToIndexButton.addEventListener("click", function () {

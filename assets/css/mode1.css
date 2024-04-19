@@ -1,13 +1,25 @@
+:root {
+    --primary-color: #8d06db;
+    --secondary-color: #ff5722;
+    --light-color: aliceblue;
+    --dark-color: #333;
+    --primary-opacity: rgba(58, 2, 80, 0.8);
+}
+
 /* Game Mode 1 styling */
 
 #car-buttons-container {
     display: none;
 }
 
+#mode1-info {
+    display: flex;
+}
+
 #start-btn {
     position: fixed;
     left: 45%;
-    top:45%;
+    top: 45%;
     width: 200px;
     text-transform: uppercase;
     font-family: "championship", monospace;
@@ -15,15 +27,15 @@
     padding: 10px;
     border: none;
     border-radius: 15px;
-    box-shadow: 4px 4px 4px #0a0a0a;
+    box-shadow: 4px 4px 4px var(--dark-color);
     cursor: pointer;
-    background-color:rgb(218, 62, 6);
-    color: aliceblue;
-    text-shadow: #6a05ad 4px 4px 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-shadow: var(--dark-color) 4px 4px 20px;
     transition: background-color 0.5s;
 
     &:hover {
-        background-color: #6a05ad;
+        background-color: var(--primary-color);
     }
 }
 
@@ -31,6 +43,7 @@
     font-family: monospace;
     font-size: 0.8rem;
     text-transform: lowercase;
+    color: var(--dark-color);
 }
 
 
@@ -52,7 +65,7 @@
     position: absolute;
     width: 2px;
     height: 100%;
-    background-color: black;
+    background-color: var(--dark-color);
 }
 
 .start-line {
@@ -71,7 +84,6 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: left 1s linear;
-    /* display: inline-block; */
     margin-top: 20px;
 }
 
@@ -105,8 +117,8 @@
     bottom: 2;
     left: -20%;
     transform: translateX(40%);
-    background-color: #8d06db;
-    color: aliceblue;
+    background-color: var(--primary-opacity);
+    color: var(--light-color);
     padding: 2px;
     border-radius: 5px;
     font-size: 1rem;
@@ -126,40 +138,34 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s;
 
     &#red-car-btn {
         background-color: #ff0000;
-        color: aliceblue;
+        color: var(--light-color);
     }
 
     &#black-car-btn {
         background-color: #000000;
-        color: aliceblue;
+        color: var(--light-color);
     }
 
     &#blue-car-btn {
         background-color: #0000ff;
-        color: aliceblue;
+        color: var(--light-color);
     }
 
     &#gray-car-btn {
         background-color: #808080;
-        color: black;
+        color: var(--light-color);
     }
 
     &#white-car-btn {
         background-color: #ffffff;
-        color: black;
+        color: var(--dark-color);
     }
 
     &#other-car-btn {
         background-color: #bcafc4;
-        color: black;
-    }
-
-    &:hover {
-        background-color: #8d06db;
-        color: aliceblue;
+        color: var(--dark-color);
     }
 }
