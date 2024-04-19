@@ -60,10 +60,16 @@ function animateCar(car) {
                     modal.style.display = "block";
 
                     // When the user clicks on "Close Game" button, close the modal.
+                    const closeGameButtonX = document.getElementById("close-game-x");
+                    closeGameButtonX.addEventListener("click", function () {
+                        // Close the modal
+                        modal.style.display = "none";                        
+                        location.reload();
+                    });
                     const closeGameButton = document.getElementById("closeGame");
                     closeGameButton.addEventListener("click", function () {
                         // Close the modal
-                        modal.style.display = "none";
+                        modal.style.display = "none";                        
                         location.reload();
                     });
 
@@ -99,6 +105,7 @@ function animateCar(car) {
 }
 /* Function to start the game by creating a new car every 1.5 seconds */
 function startGame() {
+    showGameButtons(); // Show game buttons
     setInterval(() => {
         const colors = ['red', 'blue', 'black', 'white'];
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -117,6 +124,15 @@ function checkSpeedAndInterval() {
         startGame();
     }
 }
+
+// Function to show game buttons
+function showGameButtons() {
+    $("#color-buttons").show(); // Show color buttons when game starts
+    $("#start-button").hide(); // Hide start button when game starts
+    $("#mode2-info").hide(); // Hide mode 2 info when game starts
+    $("#score-bar").show(); // Show score bar when game starts
+}
+
 /* Add event listener to start button to start the game when clicked */
 document.getElementById('start-button').addEventListener('click', startGame);
 /* Add event listeners to color buttons */

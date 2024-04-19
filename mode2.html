@@ -34,52 +34,67 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <!-- Header -->
-            <header class="mx-auto text-center">
-                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+            <header class="mx-auto text-center d-flex">
+                <a class="navbar-brand link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
             </header>
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
-                        HOME
-                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
-                        aria-label="Open settings modal">
-                        SETTINGS
-                        <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
-                    </a>
-                </li>
-            </ul>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-5">
+                        <a onclick="toggleTutorial()" class="nav-link link" aria-label="Open tutorial window">
+                            Tutorial
+                            <i class="fa-solid fa-school"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#info-button"
+                            aria-label="Open settings modal">
+                            Settings
+                            <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Main content -->
     <main>
         <!-- Game Mode Description -->
-        <div class="container">
+        <div id="mode2-info" class="container">
             <p class="lead-info">Count cars of specific colours as they pass by on the screen. </p>
         </div>
 
         <!-- Game Container Section -->
-        <section id="game-container">
-            <div class="scoreLife container">
-                <div id="level">Level: <span id="levelValue">0</span></div>
-                <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
-                <div id="score">Score: <span id="scoreValue">0</span></div>
+        <section id="game-container" class="container">
+            <div id="score-bar">
+                <div class="scoreLife">
+                    <div id="level">Level: <span id="levelValue">0</span></div>
+                    <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
+                    <div id="score">Score: <span id="scoreValue">0</span></div>
+                </div>
             </div>
             <!-- Road where cars will move -->
             <div id="track">
                 <div id="road"></div>
             </div>
-            <div id="color-buttons">
-                <button class="color-button" data-color="red" id="red-car-btn" >Red</button>
-                <button class="color-button" data-color="blue" id="blue-car-btn" >Blue</button>
-                <button class="color-button" data-color="black" id="black-car-btn" >Black</button>
-                <button class="color-button" data-color="white" id="white-car-btn">White</button>
+            <div id="car-buttons-container">
+                <button id="start-button" class="short-button">Start</button>
+                <div id="color-buttons">
+                    <button class="color-button" data-color="red" id="red-car-btn">Red</button>
+                    <button class="color-button" data-color="blue" id="blue-car-btn">Blue</button>
+                    <button class="color-button" data-color="black" id="black-car-btn">Black</button>
+                    <button class="color-button" data-color="white" id="white-car-btn">White</button>
+                </div>
             </div>
 
-            <button id="start-button" class="short-button">Start</button>
+
 
         </section>
 
@@ -151,7 +166,10 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="title">Game Over</h4>                   
+                    <h4 class="title">Game Over</h4>
+                    <button id="close-game-x" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close Modal button">
+                    </button>
                 </div>
                 <div class="modal-body container">
                     <!-- End Game statistics  -->
