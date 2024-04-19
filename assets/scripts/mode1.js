@@ -1,6 +1,19 @@
 /* jshint esversion: 11 */
 /* playSound function is used from sound-features.js */
 
+function toggleGame() {
+    var carButtonsContainer = document.getElementById("car-buttons-container");
+    var startButton = document.getElementById("start-btn");
+
+    // Toggle visibility of car buttons container
+    if (carButtonsContainer.style.display === "none") {
+        carButtonsContainer.style.display = "block";
+        startButton.style.display = "none"; // Hide the start button
+    } else {
+        carButtonsContainer.style.display = "none";
+        startButton.style.display = "block"; // Show the start button
+    }
+}
 /* Event listener for button clicks */
 document.addEventListener("DOMContentLoaded", function () {
     // Constants
@@ -60,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         other: 0,
     };
     let totalClicks = 0;
+   
     /* Function to move a car by 10 pixels and update the click count for the car */
     function moveCar(color) {
         const newPosition = positions[color] + 10; // Move by 10 pixels
@@ -119,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeGameButton.addEventListener("click", function () {
             // Close the modal
             modal.style.display = "none";
+            toggleGame(); // Hide the car buttons
             location.reload();
         });
         // When the user clicks on "Home" button, go to index.html

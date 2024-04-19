@@ -1,5 +1,39 @@
-
 /* Game Mode 1 styling */
+
+#car-buttons-container {
+    display: none;
+}
+
+#start-btn {
+    position: fixed;
+    left: 45%;
+    top:45%;
+    width: 200px;
+    text-transform: uppercase;
+    font-family: "championship", monospace;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px #0a0a0a;
+    cursor: pointer;
+    background-color:rgb(218, 62, 6);
+    color: aliceblue;
+    text-shadow: #6a05ad 4px 4px 20px;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: #6a05ad;
+    }
+}
+
+#start-btn span {
+    font-family: monospace;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+
+
 
 #track {
     position: relative;
@@ -11,9 +45,7 @@
     background-position: center;
     overflow: hidden;
     margin-bottom: 20px;
-    /* margin: 0 auto; */
 }
-
 
 .start-line,
 .finish-line {
@@ -128,6 +160,6 @@
 
     &:hover {
         background-color: #8d06db;
-        color : aliceblue;
+        color: aliceblue;
     }
 }
