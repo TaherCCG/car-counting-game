@@ -33,21 +33,28 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <!-- Header -->
-            <header class="mx-auto text-center">
-                <a class="link" href="index.html" aria-label="Go to landing page index.html">
+            <header class="mx-auto text-center d-flex">
+                <a class="navbar-brand link" href="index.html" aria-label="Go to landing page index.html">
                     <h1 class="m-2 title">CAR COUNTING GAME</h1>
                 </a>
             </header>
-            <ul class="navbar-nav me-auto">
-                <!-- Navigation Links -->
-                <li class="nav-item px-5">
-                    <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
-                        aria-label="Open settings modal">
-                        Settings
-                        <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
-                    </a>
-                </li>
-            </ul>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Settings button -->
+                    <li class="nav-item px-5">
+                        <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#info-button"
+                            aria-label="Open settings modal">
+                            <span>Settings</span>
+                            <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Main Content -->
