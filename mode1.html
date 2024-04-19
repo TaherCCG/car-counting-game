@@ -107,19 +107,23 @@
                     </div>
                 </div>
             </div>
+            <div><button id="start-btn" onclick="toggleGame()">Start Game <br><span>(double click)</span></button></div>
             <!-- Buttons for counting cars -->
-            <button class="car-btn" id="red-car-btn" data-color="red" aria-label="Button for red car">
-                Red Car</button>
-            <button class="car-btn" id="black-car-btn" data-color="black" aria-label="Button for black car">
-                Black Car</button>
-            <button class="car-btn" id="blue-car-btn" data-color="blue" aria-label="Button for blue car">
-                Blue Car</button>
-            <button class="car-btn" id="gray-car-btn" data-color="gray" aria-label="Button for gray car">
-                Gray Car</button>
-            <button class="car-btn" id="white-car-btn" data-color="white" aria-label="Button for white car">
-                White Car</button>
-            <button class="car-btn" id="other-car-btn" data-color="other" aria-label="Button for other cars">
-                Other Cars</button>
+            <div id="car-buttons-container">
+                <button class="car-btn" id="red-car-btn" data-color="red" aria-label="Button for red car">
+                    Red Car</button>
+                <button class="car-btn" id="black-car-btn" data-color="black" aria-label="Button for black car">
+                    Black Car</button>
+                <button class="car-btn" id="blue-car-btn" data-color="blue" aria-label="Button for blue car">
+                    Blue Car</button>
+                <button class="car-btn" id="gray-car-btn" data-color="gray" aria-label="Button for gray car">
+                    Gray Car</button>
+                <button class="car-btn" id="white-car-btn" data-color="white" aria-label="Button for white car">
+                    White Car</button>
+                <button class="car-btn" id="other-car-btn" data-color="other" aria-label="Button for other cars">
+                    Other Cars</button>
+            </div>
+
         </section>
 
         <div class="blur-overlay"></div>

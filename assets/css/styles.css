@@ -34,6 +34,13 @@ body {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &:hover {
+        color: purple;
+        text-shadow: #050505 4px 4px 20px;
+    }
 }
 
 
@@ -58,6 +65,7 @@ body {
     background: transparent;
     border: none;
     transition: color 0.5s;
+    padding: 10px;
 
     &:hover {
         color: purple;
@@ -78,9 +86,7 @@ body {
 .card-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    cursor: pointer;
-
+    margin-top: 50px;   
 }
 
 .card {
@@ -108,7 +114,7 @@ body {
 }
 
 .btn {
-    background-color: #8d06db;
+    background-color:rgb(218, 62, 6);
     color: aliceblue;
     border: none;
     border-radius: 5px;
