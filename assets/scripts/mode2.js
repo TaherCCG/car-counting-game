@@ -1,4 +1,7 @@
-// Counters
+/* jshint esversion: 11 */
+
+/* playSound function is used from sound-features.js */
+/* Declare Counters */
 let totalPassed = 0;
 let totalClicked = 0;
 let totalNotClicked = 0;
@@ -9,34 +12,31 @@ let whiteCount = 0;
 let life = 5;  // Initial life counter
 let carSpeed = 1; // Initial car speed
 let carCreationInterval = 1500; // Initial car creation interval (1.5 seconds)
-let levelReached = 0; 
-
-// Function to create a car element and animate its movement
+let levelReached = 0;
+/* Function to create a car element and animate its movement from left to right */
 function createCar(color) {
     const car = document.createElement('div');
     car.classList.add('car', color);
     car.dataset.color = color; // Store color data attribute for the car 
     document.getElementById('road').appendChild(car);
     animateCar(car);
-    // Increment total passed counter when a car is created. It will be used to calculate how many cars have left the track without being clicked.
+    /* Increment total passed counter when a car is created. It will be used to calculate how many cars have left the track without being clicked. */
     totalPassed++;
     // document.getElementById('totalPassed').textContent = totalPassed;
     console.log(totalPassed); // Log total passed counter to the console for debugging
 }
-
-// Function to update score counter, it will be called every time a car is clicked
+/* Function to update score counter, it will be called every time a car is clicked */
 function updateScore() {
     document.getElementById('scoreValue').textContent = totalClicked;
     console.log(totalClicked); // Log total clicked counter to the console for debugging
 }
-
-// Function to update level counter. It will be called every time the player reaches a new level and will be displayed in the game over modal
+/* Function to update level counter. It will be called every time the player reaches a new level and will be displayed in the game over modal */
 function updateLevel() {
     document.getElementById('levelValue').textContent = levelReached; // Update level counter
     document.getElementById('level-reached').textContent = levelReached; // Display level reached in the game over modal
     console.log(levelReached); // Log level reached to the console for debugging
 }
-// Function to animate car movement
+/* Function to animate car movement from left to right and handle click event on the car */
 function animateCar(car) {
     const trackWidth = document.getElementById('track').offsetWidth; // Get the width of the track
     const trackHeight = document.getElementById('track').offsetHeight; // Get the height of the track (not used in this mode yet, will be used in future to make the game more challenging by adding more rows of cars)
@@ -84,12 +84,11 @@ function animateCar(car) {
         }
     }, 1000 / 60); // Update position approximately every 60 milliseconds
 
-    // Add event listener to click on car
+    /* Add event listener to click on car */
     car.addEventListener('click', () => {
         car.clicked = true; // Mark the car as clicked
         totalClicked++; // Increment total clicked counter
         updateScore(); // Update score counter
-
         // Update color-specific counters
         const color = car.dataset.color;
         eval(`${color}Count++`);
@@ -98,8 +97,7 @@ function animateCar(car) {
         car.remove(); // Remove the car element
     });
 }
-
-// Function to start the game
+/* Function to start the game by creating a new car every 1.5 seconds */
 function startGame() {
     setInterval(() => {
         const colors = ['red', 'blue', 'black', 'white'];
@@ -107,8 +105,7 @@ function startGame() {
         createCar(randomColor);
     }, carCreationInterval); // Create a new car every 2 seconds
 }
-
-// Function to check if car speed and creation interval should be increased
+/* Function to check if car speed and creation interval should be increased */
 function checkSpeedAndInterval() {
     if (totalClicked % 10 === 0 && totalClicked > 0) {
         playSound('nextLevel');
@@ -120,27 +117,23 @@ function checkSpeedAndInterval() {
         startGame();
     }
 }
-
-// Add event listener to start button
+/* Add event listener to start button to start the game when clicked */
 document.getElementById('start-button').addEventListener('click', startGame);
-
-// Add event listeners to color buttons
+/* Add event listeners to color buttons */
 document.querySelectorAll('.color-button').forEach(button => {
     button.addEventListener('click', () => {
         const selectedColor = button.dataset.color; // Get the color of the clicked button
         const displayedCar = document.querySelector(`.car[data-color="${selectedColor}"]`); // Get the first displayed car with the clicked color
         if (displayedCar) {
-            playSound('click')
+            playSound('click');
             totalClicked++; // Increment total clicked counter
             document.getElementById('totalClicked').textContent = totalClicked;
             updateScore(); // Update score counter
             // Increment color-specific counters
             eval(`${selectedColor}Count++`);
             document.getElementById(`${selectedColor}Count`).textContent = eval(`${selectedColor}Count`);
-
             displayedCar.clicked = true; // Mark the car as clicked
             displayedCar.remove(); // Remove the displayed car
-
             checkSpeedAndInterval(); // Check if car speed and interval should be increased
         }
     });

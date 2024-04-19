@@ -1,7 +1,12 @@
+/* jshint esversion: 11 */
+/* playSound function is used from sound-features.js */
+
+/* Event listener for button clicks */
 document.addEventListener("DOMContentLoaded", function () {
     // Constants
     const track = document.getElementById('track');
     const cars = {
+        // Get the car elements
         red: document.getElementById('car-red'),
         black: document.getElementById('car-black'),
         blue: document.getElementById('car-blue'),
@@ -10,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         other: document.getElementById('car-other'),
         emergency: document.getElementById('car-emergency')
     };
+    // Get the counter elements
     const counters = {
         red: document.getElementById('red-count'),
         black: document.getElementById('black-count'),
@@ -20,10 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         emergency: document.getElementById('emergency-count'),
         total: document.getElementById('total-count')
     };
-    // Console log the cars and counters to see what they are and what they contain for debugging
-    console.log('cars:', cars);
-    console.log('counters:', counters);
-
+    // Dictionaries to store the state of the game
     let hasStarted = {
         red: false,
         black: false,
@@ -32,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         white: false,
         other: false,
     };
-
     let positions = {
         red: 0,
         black: 0,
@@ -41,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         white: 0,
         other: 0,
     };
-
     let previousPositions = {
         red: 0,
         black: 0,
@@ -50,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         white: 0,
         other: 0,
     };
-
     let clickCounts = {
         red: 0,
         black: 0,
@@ -59,22 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
         white: 0,
         other: 0,
     };
-
     let totalClicks = 0;
-    // Debugging console log function
-    function debug() {
-    console.log('clickCounts:', clickCounts);
-    console.log('totalClicks:', totalClicks);
-    console.log('positions:', positions);
-    console.log('previousPositions:', previousPositions);
-    console.log('hasStarted:', hasStarted);
-    }
-
-    // Function to move a car
+    /* Function to move a car by 10 pixels and update the click count for the car */
     function moveCar(color) {
         const newPosition = positions[color] + 10; // Move by 10 pixels
-
-        // Check if the car has overtaken another car
+        /* Check if the car has overtaken another car and play sound */
         Object.keys(cars).forEach(key => {
             if (key !== color && newPosition > previousPositions[key] && previousPositions[color] <= previousPositions[key]) {
                 if (previousPositions[key] !== 0) {
@@ -82,30 +71,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
-
-        // Check if the car starts moving for the first time
+        /* Check if the car starts moving for the first time and play the start sound */
         if (!hasStarted[color] && clickCounts[color] === 0) {
             playSound('sound1'); // Play start sound if it's the first click for this car
             hasStarted[color] = true; // Set flag to indicate the car has started moving
         }
-
         positions[color] = newPosition;
         cars[color].style.left = `${newPosition}px`;
     }
-
-    // Function to update click counts
+    /* Function to update click counts and display them */
     function updateClickCounts(color) {
         clickCounts[color]++;
         totalClicks++;
         counters[color].innerText = clickCounts[color];
         counters.total.innerText = totalClicks;
-        debug();
     }
-
-
-
-    // Event listener for button clicks
-
+    /* Get all the car buttons and add event listeners to them */
     const carButtons = document.querySelectorAll(".car-btn");
     carButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -120,13 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
+    /* Function to declare game over and display the modal with the final counts */
     function declareGameOver() {
         // Display the modal
         const modal = document.getElementById("end-game-modal-1");
         modal.style.display = "block";
-
-        // Display the final counts in the end game modal
+        /* Display the final counts in the end game modal */
         document.getElementById("final-red").textContent = clickCounts.red;
         document.getElementById("final-black").textContent = clickCounts.black;
         document.getElementById("final-blue").textContent = clickCounts.blue;
@@ -134,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("final-white").textContent = clickCounts.white;
         document.getElementById("final-other").textContent = clickCounts.other;
         document.getElementById("final-total").textContent = totalClicks;
-
         // When the user clicks on "Close Game" button, close the modal.
         const closeGameButton = document.getElementById("closeGame");
         closeGameButton.addEventListener("click", function () {
@@ -148,7 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Redirect to index.html
             window.location.href = "index.html";
         });
-    };
+    }
 });
 
+/* Export the function for testing */
 module.exports = { moveCar };

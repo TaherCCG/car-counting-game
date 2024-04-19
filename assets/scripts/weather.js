@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 /* This script fetches weather data from the OpenWeatherMap API based on the user's current location and updates the weather description on the webpage. It also changes the background image based on the weather description.
 Followed guide from documentation: https://openweathermap.org/current to get the weather data. 
 https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API to create the script to get current location.
@@ -39,26 +41,21 @@ async function getWeather(latitude, longitude) {
   try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`);  // reference: https://openweathermap.org/current  see also README.md
     const data = await response.json();
-    console.log(data);  // Log the weather data to the console
-
-    // Get the weather description - reference: https://openweathermap.org/weather-conditions  see also README.md
+    /* Get the weather description - reference: https://openweathermap.org/weather-conditions  see also README.md */
     const weatherDescription = data.weather[0].main;
-
-    // Update the weather description on the webpage
+    /* Update the weather description on the webpage */
     document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
-
-    // Change background based on weather description
+    /* Change background based on weather description */
     changeBackground(weatherDescription);
   } catch (error) {
     console.error('Error fetching weather data:', error);  // In case of an error, log the error to the console
   }
 }
-
+/* Function to change the background image based on the weather description */
 function changeBackground(weatherDescription) {
   const body = document.body;
   const weatherLower = weatherDescription.toLowerCase();
-
-  // Map weather descriptions to background images
+  /* Map weather descriptions to background images */
   const backgrounds = {
     'clear': 'url("assets/images/background/clear.png")',
     'smoke': 'url("assets/images/background/smoke.png")',
@@ -76,25 +73,21 @@ function changeBackground(weatherDescription) {
     'snow': 'url("assets/images/background/snow.png")',
     'mist': 'url("assets/images/background/mist.png")'
   };
-
-
-  // Set background based on weather description
+  /* Set background based on weather description */
   body.classList.remove('weather-background');
-
+  /* Check if the weather description is in the backgrounds object */
   if (backgrounds.hasOwnProperty(weatherLower)) {
     body.style.backgroundImage = backgrounds[weatherLower];
     body.classList.add('weather-background');
   }
 }
-
-// Function to get current location and fetch weather data
+/* Function to get current location and fetch weather data */
 function getCurrentLocationWeather() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-
-      // Call getWeather with current location coordinates
+      /* Call getWeather with current location coordinates */
       getWeather(latitude, longitude);
     }, error => {
       console.error('Error getting current location:', error);
@@ -103,6 +96,5 @@ function getCurrentLocationWeather() {
     console.error('Geolocation is not supported by this browser.');
   }
 }
-
-// Call getCurrentLocationWeather function when the page loads
+/* Call getCurrentLocationWeather function when the page loads */
 window.onload = getCurrentLocationWeather;
