@@ -16,10 +16,8 @@ describe('playSound function', () => {
     global.Audio = jest.fn(() => ({
       play: audioMock
     }));
-
     // Call the function that plays the sound
     playSound('sound1');
-
     // Check if the Audio constructor is called with the correct sound source
     expect(global.Audio).toHaveBeenCalledWith('assets/sounds/short-car-ignition.wav');
     // Check if the play method is called
@@ -31,22 +29,28 @@ describe('playSound function', () => {
     global.Audio = jest.fn(() => ({
       play: audioMock
     }));
-
     // Call the function that plays the sound
     playSound('sound2');
-
     // Check if the Audio constructor is called with the correct sound source
     expect(global.Audio).toHaveBeenCalledWith('assets/sounds/car-double-horn.wav');
     // Check if the play method is called
     expect(audioMock).toHaveBeenCalled();
   });
-
-});
-
-
-
-// Mocking the DOM elements and functions
-document.body.innerHTML = `
+  test('it should play the specified sound "game over"', () => {
+    // Mock the Audio constructor and play method
+    const audioMock = jest.fn();
+    global.Audio = jest.fn(() => ({
+      play: audioMock
+    }));
+    // Call the function that plays the sound
+    playSound('gameOver');
+    // Check if the Audio constructor is called with the correct sound source
+    expect(global.Audio).toHaveBeenCalledWith('assets/sounds/game-over.mp3');
+    // Check if the play method is called
+    expect(audioMock).toHaveBeenCalled();
+  });
+  // Mocking the DOM elements and functions
+  document.body.innerHTML = `
     <div id="card1">
         <div class="mode1"></div>
     </div>
@@ -56,38 +60,33 @@ document.body.innerHTML = `
     <button id="playMode1"></button>
     <button id="playMode2"></button>
 `;
-
-global.playSound = jest.fn();
-
-describe('setupEventListeners', () => {
-  test('adds mouseenter listener to card1', () => {
-    setupEventListeners();
-    const card1 = document.getElementById('card1');
-    card1.dispatchEvent(new Event('mouseenter'));
-    expect(card1.querySelector('.mode1').style.display).toBe('block');
-    expect(global.playSound).toHaveBeenCalledWith('sound1');
+  global.playSound = jest.fn();
+  describe('setupEventListeners', () => {
+    test('adds mouseenter listener to card1', () => {
+      setupEventListeners();
+      const card1 = document.getElementById('card1');
+      card1.dispatchEvent(new Event('mouseenter'));
+      expect(card1.querySelector('.mode1').style.display).toBe('block');
+      expect(global.playSound).toHaveBeenCalledWith('sound1');
+    });
+    test('adds mouseleave listener to card1', () => {
+      setupEventListeners();
+      const card1 = document.getElementById('card1');
+      card1.dispatchEvent(new Event('mouseleave'));
+      expect(card1.querySelector('.mode1').style.display).toBe('none');
+    });
+    test('adds mouseenter listener to card2', () => {
+      setupEventListeners();
+      const card2 = document.getElementById('card2');
+      card2.dispatchEvent(new Event('mouseenter'));
+      expect(card2.querySelector('.mode2').style.display).toBe('block');
+      expect(global.playSound).toHaveBeenCalledWith('sound1');
+    });
+    test('adds mouseleave listener to card2', () => {
+      setupEventListeners();
+      const card2 = document.getElementById('card2');
+      card2.dispatchEvent(new Event('mouseleave'));
+      expect(card2.querySelector('.mode2').style.display).toBe('none');
+    });
   });
-
-  test('adds mouseleave listener to card1', () => {
-    setupEventListeners();
-    const card1 = document.getElementById('card1');
-    card1.dispatchEvent(new Event('mouseleave'));
-    expect(card1.querySelector('.mode1').style.display).toBe('none');
-  });
-
-  test('adds mouseenter listener to card2', () => {
-    setupEventListeners();
-    const card2 = document.getElementById('card2');
-    card2.dispatchEvent(new Event('mouseenter'));
-    expect(card2.querySelector('.mode2').style.display).toBe('block');
-    expect(global.playSound).toHaveBeenCalledWith('sound1');
-  });
-
-  test('adds mouseleave listener to card2', () => {
-    setupEventListeners();
-    const card2 = document.getElementById('card2');
-    card2.dispatchEvent(new Event('mouseleave'));
-    expect(card2.querySelector('.mode2').style.display).toBe('none');
-  });
-
 });

@@ -34,57 +34,201 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <!-- Header -->
-            <header class="mx-auto text-center">
-                <h1 class="m-2 title">CAR COUNTING GAME</h1>
+            <header class="mx-auto text-center d-flex">
+                <a class="navbar-brand link" href="index.html" aria-label="Go to landing page index.html">
+                    <h1 class="m-2 title">CAR COUNTING GAME</h1>
+                </a>
             </header>
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html" aria-label="Go to landing page index.html">
-                        HOME
-                        <i class="fa-solid fa-house" aria-label="Icon of a house for landing page"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="link" data-bs-toggle="modal" data-bs-target="#info-button"
-                        aria-label="Open settings modal">
-                        SETTINGS
-                        <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
-                    </a>
-                </li>
-            </ul>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-5">
+                        <a onclick="toggleTutorial()" class="nav-link link" aria-label="Open tutorial window">
+                            Tutorial
+                            <i class="fa-solid fa-school"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#info-button"
+                            aria-label="Open settings modal">
+                            Settings
+                            <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Main content -->
     <main>
         <!-- Game Mode Description -->
-        <div class="container">
+        <div id="mode2-info" class="container">
             <p class="lead-info">Count cars of specific colours as they pass by on the screen. </p>
         </div>
 
         <!-- Game Container Section -->
-        <section id="game-container">
-            <div class="scoreLife container">
-                <div id="level">Level: <span id="levelValue">0</span></div>
-                <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
-                <div id="score">Score: <span id="scoreValue">0</span></div>
+        <section id="game-container" class="container">
+            <div id="score-bar">
+                <div class="scoreLife">
+                    <div id="level">Level: <span id="levelValue">0</span></div>
+                    <div id="life-bar">Life: <span id="lifeValue"> &block; &block; &block; &block; &block;</span></div>
+                    <div id="score">Score: <span id="scoreValue">0</span></div>
+                </div>
             </div>
             <!-- Road where cars will move -->
             <div id="track">
                 <div id="road"></div>
             </div>
-            <div id="color-buttons">
-                <button class="color-button" data-color="red" id="red-car-btn" >Red</button>
-                <button class="color-button" data-color="blue" id="blue-car-btn" >Blue</button>
-                <button class="color-button" data-color="black" id="black-car-btn" >Black</button>
-                <button class="color-button" data-color="white" id="white-car-btn">White</button>
+            <div id="car-buttons-container">
+                <button id="start-button" class="short-button">Start</button>
+                <div id="color-buttons">
+                    <button class="color-button" data-color="red" id="red-car-btn">Red</button>
+                    <button class="color-button" data-color="blue" id="blue-car-btn">Blue</button>
+                    <button class="color-button" data-color="black" id="black-car-btn">Black</button>
+                    <button class="color-button" data-color="white" id="white-car-btn">White</button>
+                </div>
             </div>
 
-            <button id="start-button" class="short-button">Start</button>
+
 
         </section>
-
+        <div class="blur-overlay"></div>
 
     </main>
+
+    <!-- Tutorial -->
+    <aside class="tutorial-container container">
+        <div class="step active">
+            <h2>Welcome to Car Counting Game Mode 2</h2>
+            <p>Follow the steps to learn how to play the game.</p>
+            <h3>Rules</h3>
+            <p>1. Count cars of specific colours as they pass by on the screen.</p>
+            <p>2. Click on the buttons to capture the cars based on their colours, before they reach end of the track.
+            </p>
+            <p>3. Each time Level increases, the cars speed up.</p>
+            <p>4. The game ends when you miss 5 cars.</p>
+            <p>5. When the game ends. You will be shown your Score and the Level you reached. Try beating your own level
+                next time.</p>
+            <p>6. Click on the close button to close the game or go to home page.</p>
+            <div class="d-flex">
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Settings</h2>
+            <p>In the settings menu, you can toggle music on or of, change volume of background or effects volume.
+            <p>The settings will be saved in your browser across different modes.</p>
+            <p>Current Weather is the weather at your current location if you have allowed permission for
+                geolocation.</p>
+            <p>Developer info and social media links are also available in the settings menu.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/settings-info.png" alt="image of setting modal">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 1:</h2>
+            <p>Click on the Start button to start.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-start-button.png" alt="image of game start button">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 2:</h2>
+            <p>Click on the buttons when you see a car on the screen.</p>
+            <p>Each button corresponds to a different colour car.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-buttons.png" alt="image of game buttons">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 3:</h2>
+            <p>Your Score increases with each car clicked.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-scroe.png" alt="image of score count">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 4:</h2>
+            <p>Your Level increases with every 10 cars clicked.</p>
+            <p>Each time Level increases, the cars speed up.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-level.png" alt="image of level count">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 5:</h2>
+            <p>You have five lives to start with.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-life.png" alt="image of full life bar">
+            </div>
+            <p>When you miss a car, you lose a life.</p>
+            <p>When you miss 5 cars, the game ends.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-life1.png" alt="image of half life bar">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 6:</h2>
+            <p>When the game ends, it shows you your Score, Level and the number of cars you clicked.</p>
+            <p>Click on the close button to close the game or go to home page.</p>
+            <div class="mb-2">
+                <img src="assets/images/tutorial/mode2-end-game-card.png" alt="image of end game card">
+            </div>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="nextStep()" class="btn">Next</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Thank You!</h2>
+            <p><strong>Enjoy the game and try beating your own highest level.</strong></p>
+            <div class="d-flex">
+                <button onclick="prevStep()" class="btn">Previous</button>
+                <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
+            </div>
+        </div>
+    </aside>
     <!-- Settings and Developer Info Modal -->
     <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info"
         aria-hidden="true">
@@ -151,7 +295,10 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="title">Game Over</h4>                   
+                    <h4 class="title">Game Over</h4>
+                    <button id="close-game-x" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close Modal button">
+                    </button>
                 </div>
                 <div class="modal-body container">
                     <!-- End Game statistics  -->
@@ -191,6 +338,20 @@
         </div>
     </aside>
 
+    <!-- Small Screen Message -->
+    <aside id="small-screen">
+        <div class="container">
+            <h3 class="text-center title">Car Counting Game</h3>
+            <h3 class="text-center"><strong>Sorry!</strong></h3>
+            <h4 class="text-center">
+                "Kindly note that the game is not compatible with mobile or smaller screens. For an optimal experience,
+                we suggest playing on a tablet or larger screen."</h4>
+            <h4 class="text-center">Minimum size required to play is 426px </h4>
+            <h5 class="text-center"><em>Thank you!</em></h5>
+        </div>
+    </aside>
+
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap 5.3.2 JS -->
@@ -199,6 +360,7 @@
         </script>
     <!-- JavaScript file -->
     <script src="assets/scripts/weather.js"></script>
+    <script src="assets/scripts/tutorial-feature.js"></script>
     <script src="assets/scripts/sound-feature.js"></script>
     <script src="assets/scripts/mode2.js"></script>
 </body>

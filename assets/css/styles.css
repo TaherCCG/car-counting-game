@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #8d06db;
+    --secondary-color: #ff5722;
+    --light-color: aliceblue;
+    --dark-color: #333;
+    --primary-opacity: rgba(58, 2, 80, 0.8);
+}
 @font-face {
     font-family: "championship";
     src: url("../fonts/championship.ttf") format("truetype");
@@ -11,7 +18,7 @@ body {
     align-items: center;
     background: linear-gradient(to bottom, #8d06db, #1a237e, #009688, #ff5722);
     /* Default Background */
-    color: aliceblue;
+    color: var(--light-color);
     font-family: "Kode Mono", monospace, sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -29,11 +36,18 @@ body {
 .title {
     font-family: "championship", monospace;
     font-size: 4rem;
-    color: rgb(243, 113, 7);
+    color: var(--secondary-color);
     text-shadow: #050505 4px 4px 20px;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &:hover {
+        color: var(--primary-color);
+        text-shadow: var(--dark-color) 4px 4px 20px;
+    }
 }
 
 
@@ -43,14 +57,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 30px;
-    background: rgba(58, 2, 80, 0.8);
+    background: var(--primary-opacity);
+}
+
+.navbar-toggler-icon {
+    background-color:var(--secondary-color);
+    border-radius: 5px;
+    border: var(--dark-color) 2px solid;
+    color: var(--light-color);
+    font-size: 1rem;
 }
 
 .link {
     font-family: "championship", monospace;
     font-size: 2rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #050505 4px 4px 20px;
+    color: var(--secondary-color);
+    text-shadow: var(--dark-color) 4px 4px 20px;
     size: 24px;
     text-decoration: none;
     text-transform: uppercase;
@@ -60,27 +82,25 @@ body {
     transition: color 0.5s;
 
     &:hover {
-        color: purple;
-        text-shadow: #050505 4px 4px 20px;
+        color: var(--primary-color);
+        text-shadow: var(--dark-color) 4px 4px 20px;
     }
 
 }
 
 .container {
     margin-top: 15px;
-    background: rgba(26, 1, 36, 0.5);
+    background: var(--primary-opacity);
     border-radius: 15px;
-    text-shadow: #050505 2px 2px 10px;
-    border: 3px solid #8d06db;
+    text-shadow: var(--dark-color) 2px 10px;
+    border: 3px solid var(--secondary-color);
 }
 
 /* Car Animation */
 .card-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    cursor: pointer;
-
+    margin-top: 50px;   
 }
 
 .card {
@@ -89,18 +109,18 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 10px;
-    border: 3px solid #8d06db;
+    border: 3px solid var(--primary-color);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: rgba(56, 1, 73, 0.781);
+    box-shadow: 0 0 10px var(--dark-color);
+    background: linear-gradient(to bottom, var(--light-color), var(--dark-color));
     transition: box-shadow 0.5s;
 }
 
 .card-title {
     font-family: "championship", monospace;
     font-size: 2rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #050505 4px 4px 20px;
+    color: var(--secondary-color);
+    text-shadow: var(--dark-color) 4px 4px 20px;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -108,8 +128,8 @@ body {
 }
 
 .btn {
-    background-color: #8d06db;
-    color: aliceblue;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -117,7 +137,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #7506b6;
+    background-color: var(--primary-color);
     transition: 0.5s;
 }
 
@@ -131,13 +151,15 @@ body {
     right: 0;
     bottom: 0;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: rgb(0, 0, 0);
-    text-shadow: #a703f39a 2px 2px 10px;
+    background-color: var(--primary-opacity);
+    color: var(--light-color);
+    text-shadow: var(--secondary-color) 2px 2px 10px;
+    border:var(--secondary-color) 5px solid;
     padding: 20px;
     font-size: 0.7em;
     font-weight: bold;
     border-radius: 20px;
+    transition: 0.5s;
 }
 
 .card-button {
@@ -151,24 +173,23 @@ body {
     border-bottom-right-radius: 15px;
     align-items: center;
     cursor: pointer;
-    background-color: #8d06db;
+    background-color: var(--primary-color);
     transition: background-color 0.5s;
     font-family: "championship", monospace;
     font-size: 2rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #7506b6 4px 4px 4px;
+    color: var(--secondary-color);
+    text-shadow: var(--dark-color) 4px 4px 4px;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover {
-        background-color: #7506b6;
         transition: 5s;
         letter-spacing: 1em;
     }
 }
 
 .card:hover {
-    box-shadow: 0 0 100px rgba(56, 1, 73, 0.781);
+    box-shadow: 0 0 50px var(--secondary-color);
 }
 
 .card-animation {
@@ -247,6 +268,7 @@ body {
     backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
     z-index: 999; /* Ensure the overlay stays on top */
     display: none; /* Initially hidden */
+    pointer-events: none;
   }
 
   .tutorial-container {
@@ -261,11 +283,11 @@ body {
   .step {
     display: none;
     padding: 20px;
-    border: 3px solid  rgb(243, 113, 7);
+    /* border: 3px solid var(--secondary-color); */
     border-radius: 8px;
     /* background-color: #fff; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: aliceblue;
+    box-shadow: 0 0 20px var(--secondary-color);
+    color: var(--light-color);
     animation: fadeIn 1s ease-in-out;
   }
 
@@ -303,15 +325,15 @@ body {
     max-width: 600px;
     background: url('../images/background/modal.png') no-repeat center center/cover;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(109, 2, 180, 0.5);
-    color: rgb(250, 247, 247);
-    text-shadow: #8d06db 4px 4px 4px;
+    box-shadow: 0 0 10px var(--dark-color);
+    color: var(--light-color);
+    text-shadow: var(--secondary-color) 4px 4px 4px;
 
 }
 
 
 .modal-button {
-    background-color: #330250;
+    background-color:var(--primary-color);
     width: 100%;
     padding: 10px;
     margin: auto 0;
@@ -319,23 +341,31 @@ body {
     transition: background-color 0.5s;
     font-family: "championship", monospace;
     font-size: 1.5rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #7506b6 4px 4px 4px;
+    color: var(--secondary-color);
+    text-shadow: var(--dark-color) 4px 4px 4px;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover {
-        background-color: #9805ee;
+        background-color: var(--primary-opacity);
         transition: 5s;
         letter-spacing: 0.5em;
     }
 }
 
+.btn-close {
+    background-color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1;
+}
+
 .font-title {
     font-family: "championship", monospace;
     font-size: 2rem;
-    color: rgb(243, 113, 7);
-    text-shadow: #7e03f8 2px 2px 2px;
+    color: var(--secondary-color);
+    text-shadow: var(--dark-color) 2px 2px 2px;
     text-align: center;
     line-height: 1;
     text-transform: uppercase;
@@ -349,15 +379,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #8d06db;
-    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--primary-opacity);
 }
 
 .modal-footer-about {
     display: flex;
     justify-content: space-between;
     margin-top: 20px 20px;
-    color: aliceblue;
+    color: var(--light-color);
 }
 
 .modal-footer-content {
@@ -368,12 +398,16 @@ body {
 
 .modal-footer-content a {
 
-    background-color: #8d06db;
+    background-color: var(--primary-color);
     padding: 10px;
     margin: auto 0;
     cursor: pointer;
     transition: background-color 0.5s;
 
+}
+
+#small-screen {
+    display: none;
 }
 
 /*  Responsive Design for Car Animation - Tablet*/
@@ -403,9 +437,26 @@ body {
     }
 }
 
+@media only screen and (min-width:0px) and (max-width: 425px){
+
+    .navbar,
+    main {
+        display:none;
+    }
+
+    #small-screen {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--light-color);
+        text-shadow: var(--dark-color) 4px 4px 20px;
+        margin-top: 20px;
+    }
+    
+}
 
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and (min-width: 426px) and (max-width: 767px) {
     .game-container {
         display: flex;
         justify-content: space-around;
@@ -413,6 +464,10 @@ body {
         margin-top: 50px;
     }
 
+    .link {
+        font-size: 1rem;
+        margin:0 auto;
+    }
     #level,
     #score,
     #life-bar {
@@ -423,10 +478,6 @@ body {
 
     .title {
         font-size: 1.5rem;
-    }
-
-    .link {
-        font-size: 0.8rem;
     }
 
     .lead-info {
@@ -445,11 +496,12 @@ body {
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .link {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin:0 auto;
     }
 
     .lead-info {
@@ -460,11 +512,11 @@ body {
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
 
     .title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .link {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
 
