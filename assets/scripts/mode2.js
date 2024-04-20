@@ -118,8 +118,8 @@ function checkSpeedAndInterval() {
         playSound('nextLevel');
         levelReached++;
         updateLevel();
-        carSpeed += 2;
-        // carCreationInterval -= 10; 
+        carSpeed += 1;
+        carCreationInterval -= 10; 
         clearInterval(carCreationIntervalId);
         startGame();
     }
