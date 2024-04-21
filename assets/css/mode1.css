@@ -4,50 +4,16 @@
     --light-color: aliceblue;
     --dark-color: #333;
     --primary-opacity: rgba(58, 2, 80, 0.8);
+    --secondary-color-shade: #b93209;
 }
 
 /* Game Mode 1 styling */
-
-#car-buttons-container {
-    display: none;
-}
 
 #mode1-info {
     display: flex;
 }
 
-#start-btn {
-    position: fixed;
-    left: 45%;
-    top: 45%;
-    width: 200px;
-    text-transform: uppercase;
-    font-family: "championship", monospace;
-    font-size: 2rem;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px var(--dark-color);
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    text-shadow: var(--dark-color) 4px 4px 20px;
-    transition: background-color 0.5s;
-
-    &:hover {
-        background-color: var(--primary-color);
-    }
-}
-
-#start-btn span {
-    font-family: monospace;
-    font-size: 0.8rem;
-    text-transform: lowercase;
-    color: var(--dark-color);
-}
-
-
-
+/* Track  */
 #track {
     position: relative;
     width: 100%;
@@ -76,6 +42,7 @@
     right: 0;
 }
 
+/* Cars */
 .car {
     position: relative;
     width: 100px;
@@ -112,10 +79,9 @@
     background-image: url('../images/cars/green_car.png');
 }
 
-/* Placed counter behind the car */
+/* Score Bar - Counter */
 .counter {
     position: absolute;
-    bottom: 2;
     left: -20%;
     transform: translateX(40%);
     background-color: var(--primary-opacity);
@@ -131,6 +97,45 @@
     margin-top: 20px;
 }
 
+/* Buttons */
+#car-buttons-container {
+    display: none;
+}
+
+/* Start Button */
+#start-btn {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 200px;
+    text-transform: uppercase;
+    font-family: "championship", monospace;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px var(--dark-color);
+    cursor: pointer;
+    background-color: var(--secondary-color-shade);
+    color: var(--light-color);
+    font-weight: lighter;
+    text-shadow: var(--dark-color) 4px 4px 20px;
+    transition: background-color 0.5s;
+}
+
+#start-btn:hover {
+    background-color: var(--primary-color);
+}
+
+#start-btn span {
+    font-family: monospace;
+    font-size: 1rem;
+    text-transform: lowercase;
+    color: var(--lighter-color);
+    text-shadow: none;
+    font-weight: bolder;
+}
+
 /* Car Buttons */
 .car-btn {
     width: 100px;
@@ -139,34 +144,34 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
 
-    &#red-car-btn {
-        background-color: #ff0000;
-        color: var(--light-color);
-    }
+#red-car-btn {
+    background-color: #ff0000;
+    color: var(--light-color);
+}
 
-    &#black-car-btn {
-        background-color: #000000;
-        color: var(--light-color);
-    }
+#black-car-btn {
+    background-color: #000000;
+    color: var(--light-color);
+}
 
-    &#blue-car-btn {
-        background-color: #0000ff;
-        color: var(--light-color);
-    }
+#blue-car-btn {
+    background-color: #0000ff;
+    color: var(--light-color);
+}
 
-    &#gray-car-btn {
-        background-color: #808080;
-        color: var(--light-color);
-    }
+#gray-car-btn {
+    background-color: #808080;
+    color: var(--light-color);
+}
 
-    &#white-car-btn {
-        background-color: #ffffff;
-        color: var(--dark-color);
-    }
+#white-car-btn {
+    background-color: #ffffff;
+    color: var(--dark-color);
+}
 
-    &#other-car-btn {
-        background-color: #bcafc4;
-        color: var(--dark-color);
-    }
+#other-car-btn {
+    background-color: #bcafc4;
+    color: var(--dark-color);
 }

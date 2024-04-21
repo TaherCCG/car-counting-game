@@ -4,10 +4,10 @@
     --light-color: aliceblue;
     --dark-color: #333;
     --primary-opacity: rgba(58, 2, 80, 0.8);
+    --secondary-color-shade: #b93209;
 }
 
-/* Basic CSS styling for Car Counting Game */
-
+/* Main styling for mode 2 */
 /* Track  */
 #track {
     width: 95%;
@@ -25,6 +25,7 @@
     height: 100%;
 }
 
+/* Cars */
 .car {
     width: 100px;
     height: 50px;
@@ -54,6 +55,7 @@
     background-size: cover;
 }
 
+/* Score Bar */
 #score-bar {
     display: none;
 }
@@ -83,17 +85,15 @@
     background-color: var(--primary-color);
     color: var(--light-color);
     border-radius: 10px;
-
 }
 
 #life-bar span {
     font-weight: bolder;
     color: limegreen;
-    ;
     text-shadow: green 5px 0px 0px;
-    /* font-size: 3rem;    */
 }
 
+/* Buttons */
 #start-button {
     margin: 10px auto;
     text-transform: uppercase;
@@ -104,14 +104,14 @@
     border-radius: 15px;
     box-shadow: 4px 4px 4px var(--dark-color);
     cursor: pointer;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-shade);
     color: var(--light-color);
     text-shadow: var(--dark-color) 4px 4px 20px;
     transition: background-color 0.5s;
+}
 
-    &:hover {
-        background-color: var(--primary-color);
-    }
+#start-button:hover {
+    background-color: var(--primary-color);
 }
 
 #color-buttons {
@@ -125,31 +125,31 @@
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
+}
 
-    &#red-car-btn {
-        background-color: #ff0000;
-        color: var(--light-color)
-    }
+#red-car-btn {
+    background-color: #ff0000;
+    color: var(--light-color)
+}
 
-    &#black-car-btn {
-        background-color: #000000;
-        color: var(--light-color);
-    }
+#black-car-btn {
+    background-color: #000000;
+    color: var(--light-color);
+}
 
-    &#blue-car-btn {
-        background-color: #0000ff;
-        color: var(--light-color);
-    }
+#blue-car-btn {
+    background-color: #0000ff;
+    color: var(--light-color);
+}
 
-    &#white-car-btn {
-        background-color: #ffffff;
-        color: var(--dark-color);
-    }
+#white-car-btn {
+    background-color: #ffffff;
+    color: var(--dark-color);
+}
 
-    &#other-car-btn {
-        background-color: #bcafc4;
-        color: var(--dark-color);
-    }
+#other-car-btn {
+    background-color: #bcafc4;
+    color: var(--dark-color);
 }
 
 #car-buttons-container {
@@ -159,6 +159,7 @@
     margin: 10px;
 }
 
+/* End Game card */
 #statistics {
     text-align: center;
     margin-top: 20px;

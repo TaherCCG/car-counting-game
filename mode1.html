@@ -57,7 +57,7 @@
                         <a class="nav-link link" data-bs-toggle="modal" data-bs-target="#info-button"
                             aria-label="Open settings modal">
                             Settings
-                            <i class="fa-solid fa-warehouse" aria-label="Icon of a warehouse for settings"></i>
+                            <i class="fa-solid fa-warehouse"></i>
                         </a>
                     </li>
                 </ul>
@@ -129,30 +129,39 @@
                 <button class="car-btn" id="other-car-btn" data-color="other" aria-label="Button for other cars">
                     Other Cars</button>
             </div>
-
         </section>
-
+        <!-- Overlay Backdrop -->
         <div class="blur-overlay"></div>
-
-
     </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="container text-center">
+        <div class="footer-content">
+            <p class="py-2">© 2024 Car Counting Game (CCG). Taher Mahmood</p>
+        </div>
+    </footer>
+
     <!-- Tutorial -->
     <aside class="tutorial-container container">
+        <!-- Tutorial Steps -->
         <div class="step active">
             <h2>Welcome to Car Counting Game Mode 1</h2>
             <p>Follow the steps to learn how to play the game.</p>
-            <h3>Rules</h3>
-            <p>1. Count cars of specific colours as they pass by on the road, with adult supervision
-                ensuring safety and guidance. <em>Please stand at a safe place away from the road</em></p>
-            <p>2. Click on the buttons to count the cars based on their colour.
-                Once you reach 100 Cars the game ends</p>
-            <p>3. The game will show you how many cars you clicked from the total 100 cars.</p>
+            <h3>Rules:</h3>
+            <ol>
+                <li>Count cars of specific colours as they pass by on the road, with adult supervision ensuring safety
+                    and
+                    guidance. <em>Please stand at a safe place away from the road</em></li>
+                <li>Click on the buttons to count the cars based on their colour.</li>
+                <li>Once you reach 100 Cars the game ends.</li>
+                <li>The game will show you how many cars you clicked from the total 100 cars.</li>
+            </ol>
+            <p>Click on the next button to start the tutorial.</p>
             <div class="d-flex">
                 <button onclick="nextStep()" class="btn">Next</button>
                 <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
             </div>
         </div>
-
         <div class="step">
             <h2>Settings</h2>
             <p>In the settings menu, you can toggle music on or of, change volume of background or effects volume.
@@ -161,7 +170,7 @@
                 geolocation.</p>
             <p>Developer info and social media links are also available in the settings menu.</p>
             <div class="mb-2">
-                <img src="assets/images/tutorial/settings-info.png" alt="image of setting modal">
+                <img src="assets/images/tutorial/settings-info.png" alt="settings information modal">
             </div>
             <div class="d-flex">
                 <button onclick="prevStep()" class="btn">Previous</button>
@@ -169,12 +178,11 @@
                 <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
             </div>
         </div>
-
         <div class="step">
             <h2>Step 1:</h2>
             <p>Double click on the Start button to start.</p>
             <div class="mb-2">
-                <img src="assets/images/tutorial/start-button.png" alt="image of game buttons with instructions">
+                <img src="assets/images/tutorial/start-button.png" alt="Game start button.">
             </div>
             <div class="d-flex">
                 <button onclick="prevStep()" class="btn">Previous</button>
@@ -186,7 +194,7 @@
             <h2>Step 2:</h2>
             <p>Click on the buttons when you see a car.</p>
             <div class="mb-2">
-                <img src="assets/images/tutorial/mode1-step1.png" alt="image of game buttons with instructions">
+                <img src="assets/images/tutorial/mode1-step1.png" alt="Car buttons for each car colour">
             </div>
             <div class="d-flex">
                 <button onclick="prevStep()" class="btn">Previous</button>
@@ -194,12 +202,11 @@
                 <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
             </div>
         </div>
-
         <div class="step">
             <h2>Step 3:</h2>
             <p>When total count reaches 100 the game ends.</p>
             <div class="mb-2">
-                <img src="assets/images/tutorial/mode1-step2.png" alt="image of total count">
+                <img src="assets/images/tutorial/mode1-step2.png" alt="Total counter.">
             </div>
             <div class="d-flex">
                 <button onclick="prevStep()" class="btn">Previous</button>
@@ -207,13 +214,12 @@
                 <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
             </div>
         </div>
-
         <div class="step">
             <h2>Step 4:</h2>
             <p>When the game ends, it shows you how many different cars you clicked from the total 100 car.</p>
             <p>Click on the close button to close the game or go to home page.</p>
             <div class="mb-2">
-                <img src="assets/images/tutorial/mode1-step3.png" alt="image of end game modal">
+                <img src="assets/images/tutorial/mode1-step3.png" alt="Game over report card.">
             </div>
             <div class="d-flex">
                 <button onclick="prevStep()" class="btn">Previous</button>
@@ -221,7 +227,6 @@
                 <button onclick="closeTutorial()" class="btn ms-auto">Close</button>
             </div>
         </div>
-
         <div class="step">
             <h2>Thank You!</h2>
             <p><strong>Please remember this game mode requires adult supervision.</strong></p>
@@ -232,10 +237,8 @@
         </div>
     </aside>
 
-
-
     <!-- Settings and Developer Info Modal -->
-    <aside class="modal fade" id="info-button" tabindex="-1" aria-labelledby="Settings and developer info"
+    <aside class="modal fade" id="info-button" tabindex="-1" aria-label="Settings and developer info"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -283,11 +286,11 @@
                         <a href="https://github.com/TaherCCG" target="_blank"
                             class="btn btn-outline-primary rounded-circle"
                             aria-label="Link to developer Github profile page">
-                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                            <i class="fab fa-github fa-2x"></i></a>
                         <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
                             class="btn btn-outline-primary rounded-circle"
                             aria-label="Link to developer LinkedIn profile page">
-                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
+                            <i class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
             </div>
@@ -298,7 +301,6 @@
     <aside id="end-game-modal-1" class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <h4 class="title">Game Over</h4>
                     <button id="close-game-x" type="button" class="btn-close" data-bs-dismiss="modal"
@@ -327,11 +329,11 @@
                         <a href="https://github.com/TaherCCG" target="_blank"
                             class="btn btn-outline-primary rounded-circle"
                             aria-label="Link to developer Github profile page">
-                            <i class="fab fa-github fa-2x" aria-label="GitHub Logo icon"></i></a>
+                            <i class="fab fa-github fa-2x"></i></a>
                         <a href="https://www.linkedin.com/in/taher-m/" target="_blank"
                             class="btn btn-outline-primary rounded-circle"
                             aria-label="Link to developer LinkedIn profile page">
-                            <i class="fab fa-linkedin fa-2x" aria-label="LinkedIn Logo icon"></i></a>
+                            <i class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                     <button id="close-game-btn" class="modal-button mb-2" aria-label="Close this window">Close
                         Window</button>
@@ -353,7 +355,6 @@
             <p class="text-center m2"><em>Thank you for your understanding.</em></p>
         </div>
     </aside>
-
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
