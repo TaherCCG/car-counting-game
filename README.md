@@ -67,6 +67,8 @@ If the user denies the location to be used, then a default background will be di
 
 The project made use of the Open Weather Map API to obtain the player's location and adjust the background image accordingly, depending on the player's local weather conditions. This dynamic feature enriches the user experience by presenting a visually immersive environment that mirrors real-time weather conditions, adding depth and realism to the gaming experience.
 
+[OpenWeatherMap API reference](https://openweathermap.org/current)
+
 Fifteen background images were carefully selected to correspond with various weather conditions, ensuring a comprehensive representation of the player's surroundings. Each image was chosen to complement the main weather description provided by the Open Weather Map API, enhancing the visual authenticity of the game's atmosphere. Furthermore, the images were generated with AI prompts to evoke a retro synthwave aesthetic, further enhancing the game's visual appeal.
 
 Below is 1 of the background drops for Clear Sky:
