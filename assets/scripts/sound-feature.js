@@ -112,8 +112,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 module.exports = { playSound };
 
-/* Bug: When user goes to a different html page, the sound effects are muted, but the background music continues to play.
-    The user needs to click pause/play music toggle button to hear the sound effects again. */
-// Working on a solution to fix this bug.
 
 
