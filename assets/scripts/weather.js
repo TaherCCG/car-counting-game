@@ -58,21 +58,21 @@ function changeBackground(weatherDescription) {
   const weatherLower = weatherDescription.toLowerCase();
   /* Map weather descriptions to background images */
   const backgrounds = {
-    'clear': 'url("assets/images/background/clear.png")',
-    'smoke': 'url("assets/images/background/smoke.png")',
-    'ash': 'url("assets/images/background/ash.png")',
-    'squall': 'url("assets/images/background/squall.png")',
-    'tornado': 'url("assets/images/background/tornado.png")',
-    'fog': 'url("assets/images/background/fog.png")',
-    'sand': 'url("assets/images/background/sand.png")',
-    'dust': 'url("assets/images/background/dust.png")',
-    'haze': 'url("assets/images/background/haze.png")',
-    'clouds': 'url("assets/images/background/clouds.png")',
-    'drizzle': 'url("assets/images/background/drizzle.png")',
+    'clear': 'url("assets/images/background/clear.webp")',
+    'smoke': 'url("assets/images/background/smoke.webp")',
+    'ash': 'url("assets/images/background/ash.webp")',
+    'squall': 'url("assets/images/background/squall.webp")',
+    'tornado': 'url("assets/images/background/tornado.webp")',
+    'fog': 'url("assets/images/background/fog.webp")',
+    'sand': 'url("assets/images/background/sand.webp")',
+    'dust': 'url("assets/images/background/dust.webp")',
+    'haze': 'url("assets/images/background/haze.webp")',
+    'clouds': 'url("assets/images/background/clouds.webp")',
+    'drizzle': 'url("assets/images/background/drizzle.webp")',
     'rain': 'url("assets/images/background/rain.webp")',
-    'thunderstorm': 'url("assets/images/background/thunderstorm.png")',
-    'snow': 'url("assets/images/background/snow.png")',
-    'mist': 'url("assets/images/background/mist.png")'
+    'thunderstorm': 'url("assets/images/background/thunderstorm.webp")',
+    'snow': 'url("assets/images/background/snow.webp")',
+    'mist': 'url("assets/images/background/mist.webp")'
   };
   /* Set background based on weather description */
   body.classList.remove('weather-background');
