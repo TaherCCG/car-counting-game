@@ -11,7 +11,7 @@ Live site can be found here: [Car Counting Game (CCG)](https://taherccg.github.i
 
 ## Mock-Up
 
-![Mock-Up](documentation/Images/design/mockup.png)
+![Mock-Up](documentation/images/design/mockup.png)
 
 ---
 ---
@@ -51,11 +51,11 @@ Live site can be found here: [Car Counting Game (CCG)](https://taherccg.github.i
 
 The user is greeted with the landing page, which shows the two game modes available. 
 
-![Landing Page](documentation/Images/features/landing-page.png)
+![Landing Page](documentation/images/features/landing-page.png)
 
 Users will be asked to allow or block geographical location, which is used with Open Weather Map API to check the local weather conditions of the user. 
 
-![alt text](documentation/Images/features/location.png)
+![alt text](documentation/images/features/location.png)
 
 If the user allows the location to be known, the background will change according to the user’s local weather conditions. There are 15 main conditions listed through Open Weather Map API, each condition will have a different background. 
 
@@ -67,25 +67,27 @@ If the user denies the location to be used, then a default background will be di
 
 The project made use of the Open Weather Map API to obtain the player's location and adjust the background image accordingly, depending on the player's local weather conditions. This dynamic feature enriches the user experience by presenting a visually immersive environment that mirrors real-time weather conditions, adding depth and realism to the gaming experience.
 
+[OpenWeatherMap API reference](https://openweathermap.org/current)
+
 Fifteen background images were carefully selected to correspond with various weather conditions, ensuring a comprehensive representation of the player's surroundings. Each image was chosen to complement the main weather description provided by the Open Weather Map API, enhancing the visual authenticity of the game's atmosphere. Furthermore, the images were generated with AI prompts to evoke a retro synthwave aesthetic, further enhancing the game's visual appeal.
 
 Below is 1 of the background drops for Clear Sky:
 
-![clear sky](documentation/Images/features/clear.png)
+![clear sky](documentation/images/features/clear.png)
 
 ### Navigation
 
 The navigation has the title of the site, which is clickable, taking the user back to landing page. Settings link opens a modal where user can define site settings.
 
-![landing page navigation](documentation/Images/features/land-nav.png)
+![landing page navigation](documentation/images/features/land-nav.png)
 
 On the game mode pages, Tutorial is added to the navigation which opens the tutorial for the relevant game mode giving the user rules and step by step instructions on how to play the game mode. 
 
-![full navigation](documentation/Images/features/full-nav.png)
+![full navigation](documentation/images/features/full-nav.png)
 
 The navigation is also responsive, so it can be used with ease with tablet devices. 
 
-![responsive navigation](documentation/Images/features/respons-nav.png)
+![responsive navigation](documentation/images/features/respons-nav.png)
 
 ### Settings
 
@@ -93,7 +95,7 @@ Settings is the main feature of the navigation menu. It can be accessed through 
 
 When clicked on settings, it opens a modal. It contains the Music Controls. The user can turn on or off the background music, sound effects and control the volume. The sound settings chosen by the user will be saved to the browsers local storage allowing the users sound settings to be effective across the site. By default, background music and sound effects are turned off, following the good practice principles. 
 
-![settings modal](documentation/Images/features/setting-modal.png)
+![settings modal](documentation/images/features/setting-modal.png)
 
 In the settings user can also see the current weather conditions, this changes as their local weather conditions change. For future implementations, this area will give the user to manually enter the city by its name, which will allow the background to change. 
 
@@ -109,31 +111,31 @@ In game mode 2, players are notified of each level increase by a distinctive sou
 
 #### Game Mode 1 
 
-![game mode 1](documentation/Images/features/game-mode1.png)
+![game mode 1](documentation/images/features/game-mode1.png)
 
 In this game mode, players will need to count the cars that pass on a public road. An advisory state that children will require adult supervision to play this game. Players must maintain a safe distance from the road. Remaining in one position, players will count the number of cars of distinct colours that pass on the public road. The game concludes when the total count reaches 100, and a report card is issued stating how many different cars passed. This information enables players to determine the most and least popular car colours. Additionally, the data can be utilised to enhance mathematical skills through activities such as finding the median number of cars. 
 
-![game mode 1 end card](documentation/Images/features/game-mode1-end-card.png)
+![game mode 1 end card](documentation/images/features/game-mode1-end-card.png)
  
 
 #### Game Mode 2 
 
-![Game mode 2](documentation/Images/features/game-mode2.png)
+![Game mode 2](documentation/images/features/game-mode2.png)
 
 This game mode offers interactivity and can be played on tablets or larger screens. It is optimised for laptops and PCs. In this game mode, cars travel along a track from the left side of the screen to the right side. Players must click on the correct car colour button before it reaches the end of the track. Each correct click earns the player a point, and every 10 cars clicked increase the level and speed of the cars. If the player misses 5 cars, the game ends. The player's score, level, and number of cars clicked are displayed on the end-game report card. 
 
-![game mode 2 end card](documentation/Images/features/game-mode2-end-card.png)
+![game mode 2 end card](documentation/images/features/game-mode2-end-card.png)
 
 
 ### Rules - How to play (Tutorial)
 
 Each Game mode has its own rules and step by step tutorial. This can be accessed by clicking the tutorial button on the navigation bar. 
 
-![Tutorial](documentation/Images/features/tutorial.png)
+![Tutorial](documentation/images/features/tutorial.png)
 
 When clicked on Tutorial button a widow will open displaying the game rules, then it will display the settings followed by a guide on how to play the game. The step-by-step guide is provided with instructions and screenshots. 
 
-![tutorial steps](documentation/Images/features/tutorial-buttons.png)
+![tutorial steps](documentation/images/features/tutorial-buttons.png)
 
 The user can navigate the guide by pressing Next button to go to next step. Previous Button to go to previous step or Close button to close the window as shown below.
 
@@ -143,7 +145,7 @@ The game's mechanics involve cars traversing from the left to the right side of 
 
 If the screen width is smaller than 600px, the following message is displayed to the user: 
 
-![Small screen message](documentation/Images/features/smaller-screen-msg.png)
+![Small screen message](documentation/images/features/smaller-screen-msg.png)
 
 ---
 ---
@@ -152,15 +154,15 @@ If the screen width is smaller than 600px, the following message is displayed to
 
 ### Landing Page Wireframe
 
-![Landing page wireframe](documentation/Images/wireframe/landing-page-wf.png)
+![Landing page wireframe](documentation/images/wireframe/landing-page-wf.png)
 
 ### Game Mode 1 Wireframe
 
-![Game mode 1 wireframe](documentation/Images/wireframe/game-mode1-wf.png)
+![Game mode 1 wireframe](documentation/images/wireframe/game-mode1-wf.png)
 
 ### Game Mode 2 Wireframe
 
-![Game mode 2 wireframe](documentation/Images/wireframe/game-mode2-wf.png)
+![Game mode 2 wireframe](documentation/images/wireframe/game-mode2-wf.png)
 
 ---
 ---
@@ -202,7 +204,7 @@ If the screen width is smaller than 600px, the following message is displayed to
 
 ### Colour Scheme 
 
-![Color scheme](documentation/Images/design/ccg-colors-palette.png)
+![Color scheme](documentation/images/design/ccg-colors-palette.png)
 
 ***#8d06db*** was used as main colour. 
 
@@ -217,41 +219,25 @@ If the screen width is smaller than 600px, the following message is displayed to
 - **Google Fonts** 
 
 ***Kode Mono*** was used as main font around the site.  I chose this font as it had that retro look to it which fit the game perfect.
- ![Google Font](documentation/Images/design/kode-mono.png)
+ ![Google Font](documentation/images/design/kode-mono.png)
 
 - **DaFont.com** 
 
 ***Championship*** was used for Title, play buttons and a few other places where needed. I chose this custom font as it goes with the retro style synthwave background images and it fits the dame perfectly.
 
-![DaFont](documentation/Images/design/dafont-com.png)
+![DaFont](documentation/images/design/dafont-com.png)
 
 Champions is a true type font (ttf), that was downloaded from dafont.com. I installed the font into the project folder fonts a sub folder of assets, and then used @font-face rule to specify the custom font. 
 
-![alt text](documentation/Images/design/font-install.png)
+![alt text](documentation/images/design/font-install.png)
+
 
 ---
 ---
 
-## Development
-Please refer to DEVELOPMENT.md  
+## Testing and Bugs
 
-This is not needed for the project, but I found it quite useful to document the project as I progressed. 
-
----
----
-
-## Testing
-
-Please refer to TESTING.md 
-
----
----
-
-### Bugs
-
-#### Solved Bugs
-
-#### Unsolved Bugs
+Please refer to [TESTING.md](documentation/TESTING.md)
 
 ---
 ---
@@ -333,33 +319,33 @@ Weather conditions codes/ description was taken from [OpenWeather Map API](https
 
 | Image # | Weather Condition | Link |
 |---|------------------|------------|
-|1| Ash |   [background](assets/images/background/ash.png)|
-|2| Clear |   [background](assets/images/background/clear.png)|
-|3| Clouds |   [background](assets/images/background/clouds.png)|
-|4| Drizzle|   [background](assets/images/background/drizzle.png)|
-|5| Dust |   [background](assets/images/background/dust.png)|
-|6| Fog |   [background](assets/images/background/fog.png)|
-|7| Haze |   [background](assets/images/background/haze.png)|
-|8| Mist |   [background](assets/images/background/mist.png)|
-|9| Rain |   [background](assets/images/background/rain.png)|
-|10| Sand |   [background](assets/images/background/sand.png)|
-|11| Smoke |   [background](assets/images/background/smoke.png)|
-|12| Snow |   [background](assets/images/background/snow.png)|
-|13| Squall |   [background](assets/images/background/squall.png)|
-|14| Thunderstorm |   [background](assets/images/background/thunderstorm.png)|
-|15| Tornado |   [background](assets/images/background/tornado.png)|
+|1| Ash |   [background](assets/images/background/ash.webp)|
+|2| Clear |   [background](assets/images/background/clear.webp)|
+|3| Clouds |   [background](assets/images/background/clouds.webp)|
+|4| Drizzle|   [background](assets/images/background/drizzle.webp)|
+|5| Dust |   [background](assets/images/background/dust.webp)|
+|6| Fog |   [background](assets/images/background/fog.webp)|
+|7| Haze |   [background](assets/images/background/haze.webp)|
+|8| Mist |   [background](assets/images/background/mist.webp)|
+|9| Rain |   [background](assets/images/background/rain.webp)|
+|10| Sand |   [background](assets/images/background/sand.webp)|
+|11| Smoke |   [background](assets/images/background/smoke.webp)|
+|12| Snow |   [background](assets/images/background/snow.webp)|
+|13| Squall |   [background](assets/images/background/squall.webp)|
+|14| Thunderstorm |   [background](assets/images/background/thunderstorm.webp)|
+|15| Tornado |   [background](assets/images/background/tornado.webp)|
 
 - Other images created with Gencraft AI.  These images are used as default background or for modal backgrounds.
 
 | Image # | File used for | Link |
 |---|------------------|------------|
-|16| Default  |   [background](assets/images/background/default.png)|
-|17| Default 1 |   [background](assets/images/background/default1.png)|
-|18| Modal |   [background](assets/images/background/modal.png)|
-|19| Modal 1|   [background](assets/images/background/modal.png)|
-|20| Modal 2|   [background](assets/images/background/modal.png)|
-|21| Modal 3|   [background](assets/images/background/modal.png)|
-|22| Modal 4|   [background](assets/images/background/modal.png)|
+|16| Default  |   [background](assets/images/background/default.webp)|
+|17| Default 1 |   [background](assets/images/background/default1.webp)|
+|18| Modal |   [background](assets/images/background/modal.webp)|
+|19| Modal 1|   [background](assets/images/background/modal.webp)|
+|20| Modal 2|   [background](assets/images/background/modal.webp)|
+|21| Modal 3|   [background](assets/images/background/modal.webp)|
+|22| Modal 4|   [background](assets/images/background/modal.webp)|
 
 #### Cars 
 

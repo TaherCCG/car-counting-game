@@ -82,16 +82,35 @@ document.addEventListener("DOMContentLoaded", function () {
         backgroundMusic.volume = volumeControl.value;
         localStorage.setItem('bgMusicVolume', volumeControl.value);
     });
-    /* Add event listener to effects volume control and set the effects volume */
-    effectsVolumeControl.addEventListener('input', function () {
-        sounds.effectsVolume = effectsVolumeControl.value;
-    });
+    // Function to toggle sounds and save the setting to local storage
+    function toggleSounds(isPlaying) {
+        for (const key in sounds) {
+            if (Object.hasOwnProperty.call(sounds, key)) {
+                const sound = sounds[key];
+                if (isPlaying) {
+                    sound.muted = false;
+                } else {
+                    sound.muted = true;
+                }
+            }
+        }
+        // Save sound settings to local storage
+        localStorage.setItem('isSoundOn', isPlaying ? 'true' : 'false');
+    }
+
+    // Function to initialize sound settings based on local storage or default if not set
+    function soundSettings() {
+        const isSoundOn = localStorage.getItem('isSoundOn');
+        if (isSoundOn === 'true') {
+            toggleSounds(true);
+        } else {
+            toggleSounds(false);
+        }
+    }
+    soundSettings();
 });
 
 module.exports = { playSound };
 
-/* Bug: When user goes to a different html page, the sound effects are muted, but the background music continues to play.
-    The user needs to click pause/play music toggle button to hear the sound effects again. */
-// Working on a solution to fix this bug.
 
 
