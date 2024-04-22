@@ -23,18 +23,15 @@ function createCar(color) {
     /* Increment total passed counter when a car is created. It will be used to calculate how many cars have left the track without being clicked. */
     totalPassed++;
     // document.getElementById('totalPassed').textContent = totalPassed;
-    console.log(totalPassed); // Log total passed counter to the console for debugging
 }
 /* Function to update score counter, it will be called every time a car is clicked */
 function updateScore() {
     document.getElementById('scoreValue').textContent = totalClicked;
-    console.log(totalClicked); // Log total clicked counter to the console for debugging
 }
 /* Function to update level counter. It will be called every time the player reaches a new level and will be displayed in the game over modal */
 function updateLevel() {
     document.getElementById('levelValue').textContent = levelReached; // Update level counter
     document.getElementById('level-reached').textContent = levelReached; // Display level reached in the game over modal
-    console.log(levelReached); // Log level reached to the console for debugging
 }
 /* Function to animate car movement from left to right and handle click event on the car */
 function animateCar(car) {
@@ -51,7 +48,6 @@ function animateCar(car) {
                 document.getElementById('totalNotClicked').textContent = totalNotClicked;
                 life--; // Decrement life counter
                 document.getElementById('lifeValue').innerHTML = ' &block;'.repeat(life);
-                console.log(life); // Log life counter to the console for debugging
 
                 if (life === 0) {
                     playSound('gameOver');
