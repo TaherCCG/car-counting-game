@@ -48,7 +48,8 @@ async function getWeather(latitude, longitude) {
     /* Change background based on weather description */
     changeBackground(weatherDescription);
   } catch (error) {
-    console.error('Error fetching weather data:', error);  // In case of an error, log the error to the console
+    let errorLog = ('Error fetching weather data:', error);  // In case of an error, log the error to the console
+    document.getElementById('weather-description').textContent = `Weather: ${errorLog}`;
   }
 }
 /* Function to change the background image based on the weather description */
@@ -89,11 +90,7 @@ function getCurrentLocationWeather() {
       const longitude = position.coords.longitude;
       /* Call getWeather with current location coordinates */
       getWeather(latitude, longitude);
-    }, error => {
-      console.error('Error getting current location:', error);
     });
-  } else {
-    console.error('Geolocation is not supported by this browser.');
   }
 }
 /* Call getCurrentLocationWeather function when the page loads */
