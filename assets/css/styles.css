@@ -39,7 +39,7 @@ main {
 
 /* Default Background */
 .weather-background {
-    background-image: url('../images/background/modal4.png');
+    background-image: url('../images/background/modal4.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -341,7 +341,7 @@ main {
     padding: 10px;
     width: 100%;
     max-width: 600px;
-    background: url('../images/background/modal.png') no-repeat center center/cover;
+    background: url('../images/background/modal.webp') no-repeat center center/cover;
     border-radius: 5px;
     box-shadow: 0 0 10px var(--dark-color);
     color: var(--light-color);
