@@ -68,7 +68,7 @@ function changeBackground(weatherDescription) {
     'haze': 'url("assets/images/background/haze.png")',
     'clouds': 'url("assets/images/background/clouds.png")',
     'drizzle': 'url("assets/images/background/drizzle.png")',
-    'rain': 'url("assets/images/background/rain.png")',
+    'rain': 'url("assets/images/background/rain.webp")',
     'thunderstorm': 'url("assets/images/background/thunderstorm.png")',
     'snow': 'url("assets/images/background/snow.png")',
     'mist': 'url("assets/images/background/mist.png")'
