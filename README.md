@@ -306,6 +306,23 @@ To make a local copy of this project, you can clone it. In your IDE Terminal, ty
 
 ## Credits
 
+### Music
+
+#### Background Music
+
+- "Music by Karl Casey @ White Bat Audio" 
+  
+[Cyberpunk Synthwave Industrial - Getaway Car // Royalty Free No Copyright Background Music](https://www.youtube.com/watch?v=VIhwbNbMhU8)
+
+#### Sound Effects
+
+Sound effects, used from [Pixabay](https://pixabay.com/)
+
+- [Car Horn](https://pixabay.com/sound-effects/search/car%20horn/?duration=0-30)
+- [Car Engine](https://pixabay.com/sound-effects/search/car%20engine%20start/?duration=0-30)
+- [Next Level Voice](https://pixabay.com/sound-effects/search/next%20level/?duration=0-30)
+- [Game Over](https://pixabay.com/sound-effects/search/game%20over%20voice/?duration=0-30)
+
 ### Images 
 
 #### Background 
