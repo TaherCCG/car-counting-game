@@ -422,6 +422,14 @@ main {
     display: none;
 }
 
+.small-screen-message p, 
+.small-screen-message h3 {
+    font-size: 1rem;
+    color: var(--light-color);
+    text-shadow: none;
+    margin-top: 20px;
+    
+}
 /* Smaller Screens below 599px / 7" Tablets */
 @media only screen and (min-width:0px) and (max-width: 599px) {
 
