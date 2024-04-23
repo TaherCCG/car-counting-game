@@ -1,5 +1,21 @@
 # TESTING
 
+**Automated Testing:**
+
+- *Efficiency:* Automated testing uses software tools to run pre-scripted tests, allowing for repeated tests without human intervention.
+- *Consistency:* Ensures consistent testing procedures and results, reducing human error.
+- *Speed:* Faster than manual testing, especially for complex systems.
+
+**Manual Testing:*
+
+- *Exploratory Testing:* Allows testers to uncover unexpected issues in an unscripted manner.
+- *User Experience Evaluation:* Essential for evaluating usability and interface design.
+Edge Cases and Usability: Identifies edge cases and assesses usability from a human perspective.
+
+**When to Deploy Each:**
+
+- *Automated Testing:* Best for repetitive tasks and stable areas of the application.
+- *Manual Testing:* Deploy for new features, usability testing, and scenarios difficult to automate.
 
 ## Browser Compatibility Tests
 
