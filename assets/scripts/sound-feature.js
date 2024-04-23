@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('isSoundOn', isPlaying ? 'true' : 'false');
     }
 
-    // Function to initialize sound settings based on local storage or default if not set
+    // Function to initialise sound settings based on local storage
     function soundSettings() {
         const isSoundOn = localStorage.getItem('isSoundOn');
         if (isSoundOn === 'true') {
