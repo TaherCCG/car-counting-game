@@ -274,9 +274,9 @@ To make a local copy of this project, you can clone it. In your IDE Terminal, ty
 ## 404 Page
 If user is taken to a page or directory that is not in the project, user is reminded to go back to home page vic clicking on the button.
 
-![alt text](documentation/images/404-page/m2.png)
+![alt text](documentation/images/page-404/m2.png)
 
-![alt text](documentation/images/404-page/m2a.png)
+![alt text](documentation/images/page-404/m2a.png)
 
 ## Future Improvements 
 
