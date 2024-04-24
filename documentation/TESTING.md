@@ -182,8 +182,25 @@ Using W3C CSS Jigsaw validator to test CSS.
 
 ![mode2](images/w3s/jigsaw-mode2-css.png)
 
+
+## JShint 
+
+![main.js](images/jshint/jshint-main.png)
+
+![mode1.js](images/jshint/jshint-mode1.png)
+
+![mode2.js](images/jshint/jshint-mode2.png)
+
+![sound-feature.js](images/jshint/jshint-sound.png)
+
+![tutorial-feature.js](images/jshint/jshint-tutorial.png)
+
+![weather.js](images/jshint/jshint-weather.png)
+
 ---
 ---
+
+
 
 ## jest Test
 
