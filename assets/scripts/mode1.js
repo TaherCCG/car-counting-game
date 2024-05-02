@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         other: 0,
     };
     let totalClicks = 0;
-   
+
     /* Function to move a car by 10 pixels and update the click count for the car */
     function moveCar(color) {
         const newPosition = positions[color] + 10; // Move by 10 pixels
@@ -139,14 +139,14 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleGame(); // Hide the car buttons
             location.reload();
         });
-         // When the user clicks on "Close Game" button, close the modal.
-         const closeGameButton1 = document.getElementById('close-game-btn');
-         closeGameButton1.addEventListener("click", function () {
-             // Close the modal
-             modal.style.display = "none";
-             toggleGame(); // Hide the car buttons
-             location.reload();
-         });
+        // When the user clicks on "Close Game" button, close the modal.
+        const closeGameButton1 = document.getElementById('close-game-btn');
+        closeGameButton1.addEventListener("click", function () {
+            // Close the modal
+            modal.style.display = "none";
+            toggleGame(); // Hide the car buttons
+            location.reload();
+        });
         // When the user clicks on "Home" button, go to index.html
         const goToIndexButton = document.getElementById("goToIndex");
         goToIndexButton.addEventListener("click", function () {
