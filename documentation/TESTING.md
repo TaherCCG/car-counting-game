@@ -185,16 +185,40 @@ Using W3C CSS Jigsaw validator to test CSS.
 
 ## JShint 
 
+- **main.js**
+  
 ![main.js](images/jshint/jshint-main.png)
+
+playsSound is declared at sound-feature.js and used here
+
+---
+
+- **mode1.js**
 
 ![mode1.js](images/jshint/jshint-mode1.png)
 
+---
+
+- **mode2.js**
+
 ![mode2.js](images/jshint/jshint-mode2.png)
+
+---
+
+- **sound-feature.js**
 
 ![sound-feature.js](images/jshint/jshint-sound.png)
 
+---
+
+- **tutorial-feature.js**
+  
 ![tutorial-feature.js](images/jshint/jshint-tutorial.png)
 
+---
+
+- **weather.js**
+  
 ![weather.js](images/jshint/jshint-weather.png)
 
 ---
